@@ -277,6 +277,12 @@ body {
   color: #333;
   background-color: #fff;
 }
+
+text-secondary {
+  color:#0ACCCE !important;
+}
+
+
 input,
 button,
 select,
