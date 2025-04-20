@@ -1,0 +1,74 @@
+import React, { useState } from "react";
+import "./Gallery.css";
+
+import "./Gallery.css";
+import SectionHeader from "./component/SectionHeader";
+
+// const categories = [
+//     { key: "all", label: "All" },
+//     { key: "web", label: "Continental" },
+//     { key: "icon", label: "Asian Food" },
+//     { key: "graphic", label: "Italian Food" },
+// ];
+
+const galleryItems = [
+    { src: "src/assets/img/works/1.jpg", type: "web" },
+    { src: "src/assets/img/works/2.jpg", type: "icon" },
+    { src: "src/assets/img/works/3.jpg", type: "graphic" },
+    { src: "src/assets/img/works/4.jpg", type: "web" },
+    { src: "src/assets/img/works/5.jpg", type: "web" },
+    { src: "src/assets/img/works/6.jpg", type: "icon" },
+    { src: "src/assets/img/works/7.jpg", type: "web" },
+    { src: "src/assets/img/works/8.jpg", type: "graphic" },
+];
+
+const Gallery = () => {
+    const [active, setActive] = useState("all");
+
+    const filteredItems =
+        active === "all"
+            ? galleryItems
+            : galleryItems.filter((item) => item.type === active);
+
+    return (
+        <>
+            <SectionHeader
+                title="Gallery"
+                subtitle="Browse through moments that capture the heart of our healthcare journey and patient care."
+            />
+
+            <div className="container">
+
+                <div className="row">
+                    <div className="col-lg-12">
+
+                        <div className="clearfix" />
+                        <div className="row">
+                            <section id="projects">
+                                <ul id="thumbs" className="portfolio">
+                                    {filteredItems.map((item, index) => (
+                                        <li
+                                            key={index}
+                                            className={`item-thumbs col-lg-3`}
+                                            data-id={`id-${index}`}
+                                            data-type={item.type}
+                                        >
+                                            {/* <a className="hover-wrap" title="Portfolio name">
+                                                <span className="overlay-img"></span>
+                                                <span className="overlay-img-thumb">
+                                                    <i className="icon-info-blocks fa fa-search"></i>
+                                                </span>
+                                            </a> */}
+                                            <img src={item.src} alt="" />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div></>
+    );
+};
+
+export default Gallery;
