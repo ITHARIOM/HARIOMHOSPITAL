@@ -8,6 +8,7 @@ import Gallery from "./pages/Gallery";
 import Mission from "./pages/Mission";
 import ServicesPage from "./pages/ServicesPage";
 import Contact from "./pages/Contact";
+import AppointmentButton from "./pages/component/AppointmentButton";
 {/* <Header */ }
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
         {/* <Route path="/integration/jharkhand" element={<IntegrationJharkhand />} /> */}
 
       </Routes>
+      <AppointmentButton/>
       <Footer />
     </Router>
   );
