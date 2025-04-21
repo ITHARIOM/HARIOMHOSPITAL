@@ -21,17 +21,17 @@ const Home = () => {
         <div className="custom-slider">
           <ul className="slides">
             <li>
-              <img src={slide1} alt="Caring for Health" />
+              <img src={slide1} alt="हरिओम जनसेवा संस्थान " />
               <div className="slide-caption">
-                <h3>Caring for Health</h3>
-                <p>Doloribus omnis minus temporibus perferendis ipsa</p>
+                <h3>हरिओम जनसेवा संस्थान </h3>
+                <p>हर रोगी को निःशुल्क सेवा, हरिओम का संकल्प</p>
               </div>
             </li>
             <li>
               <img src={slide2} alt="Best Equipments" />
               <div className="slide-caption">
-                <h3>Best Equipments</h3>
-                <p>Doloribus omnis minus temporibus perferendis ipsa</p>
+                <h3>हरिओम जनसेवा </h3>
+                <p>गरीबों की सेवा, हरिओम का लक्ष्य</p>
               </div>
             </li>
           </ul>
@@ -42,7 +42,7 @@ const Home = () => {
       <div className="marquee-wrapper">
         <div className="marquee blink-text">
           <span>
-            हरिओम जनसेवा हॉस्पिटल • Hariom Jansewa Hospital • हरिओम जनसेवा हॉस्पिटल • Hariom Jansewa Hospital •{" "}
+          हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan •{" "}
           </span>
         </div>
       </div>
@@ -52,10 +52,12 @@ const Home = () => {
           <span>आपका स्वास्थ्य, हमारी सेवा</span><br />
           <span>Your Health is Our Mission</span>
         </h1>
+        <h1>
         <p className="section-subtitle">
           हम बिना किसी खर्च के इलाज करते हैं। इलाज, सेवा और प्यार – हर किसी के लिए।<br />
           We provide free medical care with love and dignity to everyone in need.
         </p>
+        </h1>
       </div>
     </section>
       {/* Services Section */}
@@ -123,7 +125,7 @@ const Home = () => {
           <div className="section-header text-center">
             <h2 className="section-title">Welcome!</h2>
             <p className="section-subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            हरिओम जनसेवा संस्थान 
             </p>
           </div>
           <div className="about-content-wrapper">
@@ -132,31 +134,30 @@ const Home = () => {
             </div>
             <div className="about-text">
               <h5>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed,
-                quidem quis praesentium, ut unde fuga error commodi architecto.
-                Omnis minus autem nemo numquam.
+              हरिओम जनसेवा संस्थान  एक निःस्वार्थ भाव से संचालित संस्था है, जिसका उद्देश्य जरूरतमंद और आर्थिक रूप से कमजोर वर्ग के लोगों को निःशुल्क चिकित्सा सेवाएं 
+              उपलब्ध कराना है। यह अस्पताल मानवता की सेवा को ही सबसे बड़ा धर्म मानते हुए हर रोगी को बिना किसी शुल्क के इलाज, दवाइयाँ, परामर्श और अन्य जरूरी स्वास्थ्य सेवाएं प्रदान करता है।
               </h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sed,
-                quidem quis praesentium, deserunt.
+              हमारी विशेषताएं:
               </p>
               <ul className="features-list">
                 <li>
-                  <i className="fa fa-arrow-circle-right" /> Lorem ipsum dolor sit
-                  amet
+                  <i className="fa fa-arrow-circle-right" /> निःशुल्क ओपीडी सेवाएं (जनरल फिजिशियन, विशेषज्ञ डॉक्टर)
+                  
                 </li>
                 <li>
-                  <i className="fa fa-arrow-circle-right" /> Explicabo deleniti
-                  neque aliquid
+                  <i className="fa fa-arrow-circle-right" /> मुफ्त दवाइयों की सुविधा
+                  
                 </li>
                 <li>
-                  <i className="fa fa-arrow-circle-right" /> Consectetur adipisicing
-                  elit
+                  <i className="fa fa-arrow-circle-right" /> फ्री लैब जांच और टेस्ट
+                  
                 </li>
                 <li>
-                  <i className="fa fa-arrow-circle-right" /> Quo issimos molest
-                  quibusdam temporibus
+                  <i className="fa fa-arrow-circle-right" />समय-समय पर निःशुल्क चिकित्सा शिविर
+                  
                 </li>
+              
               </ul>
             </div>
           </div>

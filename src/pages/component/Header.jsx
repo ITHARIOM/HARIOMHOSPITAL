@@ -48,6 +48,9 @@ const Header = () => {
                 <li className={getActiveClass("/about")}>
                   <Link to="/about">About us</Link>
                 </li>
+                <li>
+                  <Link to="/mission">Mission</Link>
+                </li>
                 <li className={getActiveClass("/services")}>
                   <Link to="/services">Services</Link>
                 </li>
@@ -57,10 +60,6 @@ const Header = () => {
                 <li className={getActiveClass("/contact")}>
                   <Link to="/contact">Contact</Link>
                 </li>
-                <li>
-                  <Link to="/mission">Mission</Link>
-                </li>
-
               </ul>
             </div>
           </div>

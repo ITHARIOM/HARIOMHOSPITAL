@@ -15,13 +15,15 @@ const About = () => {
             <h3 className="fw-bold text-universal">
               सरल इलाज, सच्ची सेवा | <span className="text-dark">Care for All</span>
             </h3>
+          
             <p className="text-muted">
-              हरिओम जनसेवा हॉस्पिटल खासकर उन लोगों के लिए बनाया गया है जो पढ़े-लिखे नहीं हैं। यहां इलाज आसान भाषा और मदद के साथ होता है।
+            हरिओम जनसेवा संस्थान एक गैर-लाभकारी, मानवसेवा को समर्पित संस्था है, जिसकी स्थापना समाज के सबसे वंचित, गरीब और जरूरतमंद वर्गों को निःशुल्क स्वास्थ्य सेवाएं उपलब्ध कराने के उद्देश्य से की गई थी। 
+            इस संस्थान की नींव करुणा, सेवा और सामाजिक समानता के सिद्धांतों पर रखी गई है। हमारा उद्देश्य है कि कोई भी व्यक्ति केवल आर्थिक अभाव के कारण उपचार से वंचित न रहे।
               <br />
               Hariom Jansewa Hospital is made for people who may not read or write. We use simple ways to help and treat everyone.
             </p>
+            
           </div>
-
           <div className="row mb-5">
             <div className="col-md-6">
               <p className="text-secondary">
@@ -34,13 +36,13 @@ const About = () => {
                 और जानें | Learn More
               </a>
             </div>
-            <div className="col-md-6">
+            {/* <div className="col-md-6">
               <img
                 src="images/about-touch.jpg"
                 className="img-fluid rounded shadow"
                 alt="हमारी टीम | Our Team"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* Why Choose Us & Our Work */}
@@ -52,8 +54,27 @@ const About = () => {
                   <div className="info-box">
                     <h4 className="box-title">हम क्यों खास हैं?</h4>
                     <p className="box-text">
-                      हम इलाज को आसान बनाते हैं। बोलचाल की भाषा, इशारे, और प्यार से काम करते हैं। कोई डर नहीं – बस भरोसा।
+                    100% निःशुल्क इलाज
                     </p>
+                    <p className="box-text">
+                    अनुभवी और सेवाभावी डॉक्टरों की टीम
+                    </p>
+                    <p className="box-text">
+                    साफ-सुथरा और रोगी अनुकूल वातावरण
+                    </p>
+                    <p className="box-text">
+                    मानवता आधारित सेवा
+                    </p>
+                    <p className="box-text">
+                    नियमित स्वास्थ्य शिविर और जागरूकता अभियान
+                    </p>
+                    <p className="box-text">
+                    
+                    </p>
+                    <p className="box-text">
+                   
+                    </p>
+
                   </div>
                 </div>
                 {/* Free Services */}

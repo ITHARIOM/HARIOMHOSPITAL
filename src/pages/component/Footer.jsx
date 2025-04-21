@@ -20,10 +20,10 @@ const Footer = () => {
             <div className="container">
                 <div className="footer-columns">
                     <div className="footer-branding">
-                        <h2>Touch Hospital</h2>
+                        <h2>हरिओम जनसेवा संस्थान </h2>
                         <p>
-                            Touching lives through healing and hope. We are committed to providing
-                            free healthcare to those in need.
+                            हर व्यक्ति को सम्मानपूर्वक, निःशुल्क और गुणवत्तापूर्ण चिकित्सा सेवा उपलब्ध कराना।
+                            जरूरतमंदों की सेवा करना ही सच्ची मानवता है – यही हमारा संकल्प है।
                         </p>
                     </div>
                     <div className="footer-links">
@@ -35,6 +35,9 @@ const Footer = () => {
                             <li className={getActiveClass("/about")}>
                                 <Link to="/about">About us</Link>
                             </li>
+                            <li>
+                                <Link to="/mission">Mission</Link>
+                            </li>
                             <li className={getActiveClass("/services")}>
                                 <Link to="/services">Services</Link>
                             </li>
@@ -44,9 +47,7 @@ const Footer = () => {
                             <li className={getActiveClass("/contact")}>
                                 <Link to="/contact">Contact</Link>
                             </li>
-                            <li>
-                                <Link to="/mission">Mission</Link>
-                            </li>
+                            
 
                         </ul>
                     </div>
@@ -57,10 +58,10 @@ const Footer = () => {
                                 <i className="fas fa-map-marker-alt" /> 123 Hope Street, Pune
                             </li>
                             <li>
-                                <i className="fas fa-phone-alt" /> +91 98765 43210
+                                <i className="fas fa-phone-alt" /> +91 9264496798
                             </li>
                             <li>
-                                <i className="fas fa-envelope" /> help@touchhospital.org
+                                <i className="fas fa-envelope" /> hariomjanseva2021@gmail.com
                             </li>
                         </ul>
                     </div>
@@ -74,7 +75,7 @@ const Footer = () => {
                             </button>
                         </form>
                         <div className="social-icons">
-                            <a href="#">
+                            <a href="https://www.facebook.com/share/12Ljkpm1KJb/">
                                 <i className="fab fa-facebook-f" />
                             </a>
                             <a href="#">
@@ -90,7 +91,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-bottom">
-                    <p>© 2025 Touch Hospital. All rights reserved.</p>
+                    <p>© 2025 हरिओम जनसेवा संस्थान . All rights reserved.</p>
                 </div>
             </div>
         </footer>
