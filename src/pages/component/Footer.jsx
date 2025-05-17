@@ -55,7 +55,7 @@ const Footer = () => {
                         <h4>Contact Us</h4>
                         <ul>
                             <li>
-                                <i className="fas fa-map-marker-alt" /> 123 Hope Street, Pune
+                                <i className="fas fa-map-marker-alt" /> 
                             </li>
                             <li>
                                 <i className="fas fa-phone-alt" /> +91 9264496798

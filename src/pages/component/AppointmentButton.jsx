@@ -24,6 +24,10 @@ const AppointmentButton = () => {
                         </span>
                         <h2>Book an Appointment</h2>
                         <form>
+                        <div className="form-group">
+                                <label>Select Department</label>
+                                <input type="text" placeholder="Select Department " />
+                            </div>
                             <div className="form-group">
                                 <label>Name</label>
                                 <input type="text" placeholder="Your Name" />

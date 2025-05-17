@@ -159,7 +159,7 @@ const Mission = () => {
                     </div>
                 </div>
                 <div className="image-section">
-                    <img src={ims} alt="Mission & Vision Image" />
+                    {/* <img src={ims} alt="Mission & Vision Image" /> */}
                 </div>
             </section>
         </div>
