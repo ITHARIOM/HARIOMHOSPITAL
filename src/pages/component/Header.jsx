@@ -1,29 +1,112 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-
-import logo from "@/assets/img/logo234.png"
-// import Logo from "./Logo";
-
+import logo from "@/assets/img/logo234.png";
 import { faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  console.log(location);
+
   const getActiveClass = (path) => {
     return location.pathname === path ? "active" : "";
+  };
 
-  }
-
-  // Close menu and dropdown on route change
+  // Close menu on route change
   useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
   return (
     <>
-      <header>
-        <div className="navbar navbar-default navbar-fixed-top">
+      {/* Top Strip */}
+
+
+      {/* Navbar */}
+      <header style={{ position: "fixed", width: "100%", zIndex: 999, top: 0 }}>
+        {/* Elegant Top Strip */}
+        <div style={{ background: "#0F1A2F", padding: "10px 0", fontSize: "14px", color: "#fff" }}>
+          <div
+            className="container"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "nowrap", // Force single line
+            }}
+          >
+            {/* Left - Address */}
+            <div style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+              <a
+                href="https://goo.gl/maps/KriuXMTHBWFyEgCHA"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                  color: "#fff",
+                }}
+              >
+                <i className="fas fa-map-marker-alt" style={{ marginRight: 6, color: "#e74c3c" }}></i>
+                <span>Bhelupur, Varanasi - 221010</span>
+              </a>
+            </div>
+
+            {/* Right - Horizontal Contact Info */}
+            <div
+              style={{
+                display: "flex",
+                gap: "20px",
+                alignItems: "center",
+                flexWrap: "nowrap",
+                whiteSpace: "nowrap",
+              }}
+            >
+              <a
+                href="https://wa.me/+917518555544"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                  color: "#fff",
+                }}
+              >
+                <i className="fab fa-whatsapp" style={{ marginRight: 6, color: "#25D366" }}></i>
+                <span>(+91) 7518 5555 44</span>
+              </a>
+
+              <a
+                href="tel:+917518555544"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  textDecoration: "none",
+                  color: "#fff",
+                }}
+              >
+                <i className="fas fa-phone-alt" style={{ marginRight: 6, color: "#1abc9c" }}></i>
+                <span>(+91) 7518 5555 44</span>
+              </a>
+
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <i className="far fa-clock" style={{ marginRight: 6, color: "#f1c40f" }}></i>
+                <span>9:00 AM to 10:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        {/* Main Navbar */}
+        <div className="navbar navbar-default">
           <div className="container">
             <div className="navbar-header">
               <button
@@ -36,7 +119,7 @@ const Header = () => {
                 <span className="icon-bar" />
                 <span className="icon-bar" />
               </button>
-              <a className="navbar-brand" href="index.html">
+              <a className="navbar-brand" href="/">
                 <img style={{ height: 100 }} src={logo} alt="logo" />
               </a>
             </div>
@@ -65,6 +148,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+
 
     </>
   );

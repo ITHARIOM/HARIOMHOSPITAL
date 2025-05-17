@@ -1,13 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AppointmentButton.css";
 import { FaCalendarCheck } from "react-icons/fa"; // ✅ Icon added
 
+const scheduleData = {
+    Monday: ["Gynecologist", "General Physician"],
+    Tuesday: ["General Physician (MD)"],
+    Wednesday: ["General Physician (MD)"],
+    Thursday: ["Orthopedic Specialist", "Gynecologist"],
+    Friday: ["Cardiologist (DM)", "General Physician (MD)"],
+    Saturday: ["General Physician (MD)"],
+    Sunday: ["General Physician", "Gynecologist"],
+};
 const AppointmentButton = () => {
     const [showForm, setShowForm] = useState(false);
 
     const handleToggleForm = () => {
         setShowForm(!showForm);
     };
+    const [availableDoctors, setAvailableDoctors] = useState([]);
+    const [selectedDoctor, setSelectedDoctor] = useState("");
+
+    useEffect(() => {
+        const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+
+        const doctorsToday = scheduleData[today] || [];
+        setAvailableDoctors(doctorsToday);
+        setSelectedDoctor(doctorsToday[0] || "");
+    }, []);
 
     return (
         <>
@@ -24,9 +43,22 @@ const AppointmentButton = () => {
                         </span>
                         <h2>Book an Appointment</h2>
                         <form>
-                        <div className="form-group">
+                            <div className="form-group">
                                 <label>Select Department</label>
                                 <input type="text" placeholder="Select Department " />
+                            </div>
+                            <div className="form-group">
+                                <label>Select Available Doctor</label>
+                                <select
+                                    value={selectedDoctor}
+                                    onChange={(e) => setSelectedDoctor(e.target.value)}
+                                >
+                                    {availableDoctors.map((doctor, idx) => (
+                                        <option key={idx} value={doctor}>
+                                            {doctor}
+                                        </option>
+                                    ))}
+                                </select>
                             </div>
                             <div className="form-group">
                                 <label>Name</label>
@@ -48,6 +80,7 @@ const AppointmentButton = () => {
                                 <label>Reason</label>
                                 <textarea placeholder="Describe your concern"></textarea>
                             </div>
+                            
                             <button type="submit">Submit</button>
                         </form>
                     </div>

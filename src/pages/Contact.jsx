@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ContactSection.css";
 import SectionHeader from "./component/SectionHeader";
 
+const scheduleData = {
+    Monday: ["Gynecologist", "General Physician"],
+    Tuesday: ["General Physician (MD)"],
+    Wednesday: ["General Physician (MD)"],
+    Thursday: ["Orthopedic Specialist", "Gynecologist"],
+    Friday: ["Cardiologist (DM)", "General Physician (MD)"],
+    Saturday: ["General Physician (MD)"],
+    Sunday: ["General Physician", "Gynecologist"],
+};
+
 const ContactSection = () => {
+    const [availableDoctors, setAvailableDoctors] = useState([]);
+    const [selectedDoctor, setSelectedDoctor] = useState("");
+
+    useEffect(() => {
+        const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
+      
+        const doctorsToday = scheduleData[today] || [];
+        setAvailableDoctors(doctorsToday);
+        setSelectedDoctor(doctorsToday[0] || "");
+    }, []);
+
     return (
         <>
             <SectionHeader
@@ -12,8 +33,6 @@ const ContactSection = () => {
 
             <section id="contact" className="contact-section">
                 <div className="contact-container">
-
-
                     <div className="contact-content">
                         {/* Contact Form */}
                         <div className="contact-form">
@@ -31,6 +50,10 @@ const ContactSection = () => {
                                     <label>Phone</label>
                                     <input type="tel" placeholder="Your Phone" />
                                 </div>
+
+                                {/* Dynamic Doctor Dropdown */}
+                               
+
                                 <div className="form-group">
                                     <label>Message</label>
                                     <textarea placeholder="Your Message"></textarea>
@@ -52,7 +75,6 @@ const ContactSection = () => {
                 </div>
             </section>
         </>
-
     );
 };
 
