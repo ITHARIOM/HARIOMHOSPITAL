@@ -38,7 +38,7 @@ const Header = () => {
             {/* Left - Address */}
             <div style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
               <a
-                href="https://goo.gl/maps/KriuXMTHBWFyEgCHA"
+                //href="https://goo.gl/maps/KriuXMTHBWFyEgCHA"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -49,7 +49,7 @@ const Header = () => {
                 }}
               >
                 <i className="fas fa-map-marker-alt" style={{ marginRight: 6, color: "#e74c3c" }}></i>
-                <span>Bhelupur, Varanasi - 221010</span>
+                <span>Barauli, Gopalganj, Bihar - 841405</span>
               </a>
             </div>
 
@@ -64,7 +64,7 @@ const Header = () => {
               }}
             >
               <a
-                href="https://wa.me/+917518555544"
+                href="https://wa.me/+919264496798"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -75,11 +75,11 @@ const Header = () => {
                 }}
               >
                 <i className="fab fa-whatsapp" style={{ marginRight: 6, color: "#25D366" }}></i>
-                <span>(+91) 7518 5555 44</span>
+                <span>(+91) 9264496798</span>
               </a>
 
               <a
-                href="tel:+917518555544"
+                href="tel:+919864496798"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -88,7 +88,7 @@ const Header = () => {
                 }}
               >
                 <i className="fas fa-phone-alt" style={{ marginRight: 6, color: "#1abc9c" }}></i>
-                <span>(+91) 7518 5555 44</span>
+                <span>(+91) 9864496798</span>
               </a>
 
               <div style={{ display: "flex", alignItems: "center" }}>
