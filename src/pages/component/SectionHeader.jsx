@@ -6,7 +6,7 @@ const SectionHeader = ({
   background = "#0ACCCE",
   textColor = "#ffffff",
   className = "",
-  paddingTop = 100,
+  paddingTop = 170,
   paddingBottom = 60,
 }) => {
   const sectionStyle = {
@@ -19,8 +19,8 @@ const SectionHeader = ({
   return (
     <section className={`section-header text-center ${className}`} style={sectionStyle}>
       <div className="container">
-        <h2 className="display-4 fw-bold">{title}</h2>
-        <p className="lead mb-4">{subtitle}</p>
+        <h3 className="display-4 fw-bold" style={{ color: "white", textShadow: "2px 2px 4px rgb(0, 0, 0)" ,fontSize: "2.7rem"}}>{title}</h3>
+        <p className="lead mb-4" style={{color:"white"}}>{subtitle}</p>
       </div>
     </section>
   );

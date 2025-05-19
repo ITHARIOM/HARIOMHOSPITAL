@@ -16,6 +16,7 @@ import pat2 from "@/assets/img/pt2.jpg"
 import pat3 from "@/assets/img/pt3.jpg"
 import { useEffect, useState } from "react"
 import { color } from "framer-motion"
+import "./Home.css";
 const Home = () => {
   const slides = [
     {
@@ -63,26 +64,28 @@ const Home = () => {
 
       {/* We Care Section */}
       <section className="txt-area classy-section elegant-section">
-        <div className="marquee-wrapper">
-          <div className="marquee blink-text">
-            <span>
-              हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan •{" "}
-            </span>
-          </div>
-        </div>
+  <div className="marquee-wrapper">
+    <div className="marquee blink-text">
+      <span>
+        हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan •{" "}
+      </span>
+    </div>
+  </div>
 
-        <div className="elegant-slogan-wrapper text-center">
-          <h1 className="elegant-slogan-title">
-            <span className="slogan-hindi">आपका स्वास्थ्य, हमारी सेवा</span>
-            <span className="slogan-english">Your Health is Our Mission</span>
-          </h1>
-          <p className="elegant-slogan-subtitle">
-            हम बिना किसी खर्च के इलाज करते हैं। इलाज, सेवा और प्यार – हर किसी के लिए।<br />
-            We provide free medical care with love and dignity to everyone in need.
-          </p>
-        </div>
+  <div className="elegant-slogan-wrapper text-center">
+    <h1 className="elegant-slogan-title">
+      <span className="slogan-hindi">आपका स्वास्थ्य, हमारी सेवा</span>
+      <span className="slogan-english">Your Health is Our Mission</span>
+    </h1>
+    <p className="elegant-slogan-subtitle">
+      हम बिना किसी खर्च के इलाज करते हैं। इलाज, सेवा और प्यार – हर किसी के लिए।<br />
+      <span className="italic text-gray-600">
+        We provide free medical care with love and dignity to everyone in need.
+      </span>
+    </p>
+  </div>
+</section>
 
-      </section>
       {/* Services Section */}
       <section id="services" className="services-section elegant-section">
         <div className="container">
@@ -92,38 +95,22 @@ const Home = () => {
               Trusted care from expert hands — tailored for every stage of life.
             </p>
           </div>
+
           <div className="service-grid">
-            <div className="service-card">
-              <img src={png1} alt="Gynecologist" />
-              <h4>Gynecologist</h4>
-              <p>
-                Comprehensive care for women’s reproductive health, from adolescence through menopause.
-              </p>
-            </div>
-
-            <div className="service-card">
-              <img src={png2} alt="General Physician" />
-              <h4>General Physician</h4>
-              <p>
-                Expert diagnosis and treatment for a wide range of general health concerns and illnesses.
-              </p>
-            </div>
-
-            <div className="service-card">
-              <img src={png3} alt="Orthopedic Specialist" />
-              <h4>Orthopedic Specialist</h4>
-              <p>
-                Specialized care for bones, joints, and muscles — helping you move with ease.
-              </p>
-            </div>
-
-            <div className="service-card">
-              <img src={png4} alt="Cardiologist" />
-              <h4>Cardiologist</h4>
-              <p>
-                Heart health experts offering preventive, diagnostic, and interventional cardiac care.
-              </p>
-            </div>
+            {[
+              { img: png1, title: "Gynecologist", desc: "Comprehensive care for women’s reproductive health, from adolescence through menopause." },
+              { img: png2, title: "General Physician", desc: "Expert diagnosis and treatment for a wide range of general health concerns and illnesses." },
+              { img: png3, title: "Orthopedic Specialist", desc: "Specialized care for bones, joints, and muscles — helping you move with ease." },
+              { img: png4, title: "Cardiologist", desc: "Heart health experts offering preventive, diagnostic, and interventional cardiac care." }
+            ].map((service, index) => (
+              <div className="service-card" key={index}>
+                <div className="icon-wrapper">
+                  <img src={service.img} alt={service.title} />
+                </div>
+                <h4>{service.title}</h4>
+                <p>{service.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

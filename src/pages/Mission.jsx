@@ -10,10 +10,10 @@ const Mission = () => {
                 subtitle="सेवा ही सबसे बड़ा धर्म है"
             />
             <div className="mission-container">
-                <div className="section-title">
-                    <h1>Mission & Vision</h1>
+                {/* <div className="section-title">
+                    <h2 style={{color: "#0ACCCE"}}>Mission & Vision</h2>
                     <p>सेवा ही सबसे बड़ा धर्म है</p>
-                </div>
+                </div> */}
 
                 <div className="grid">
                     {/* Mission */}
