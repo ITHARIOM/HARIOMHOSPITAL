@@ -166,7 +166,7 @@
 /* ------------------ */
 .about-section {
   background: linear-gradient(to right, #0f172a, #1e293b); /* dark-blue gradient */
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
   color: #ffffff;
 }
 
@@ -230,7 +230,7 @@
 
 .features-list li {
   margin-bottom: 12px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
 }

@@ -5,35 +5,36 @@ import SectionHeader from "./component/SectionHeader";
 const services = [
     {
         title: "Child Care",
-        description: "Dedicated pediatric care, ensuring your little ones grow up healthy and happy.",
+        description: "Comprehensive pediatric services tailored to ensure your child's health, growth, and development from infancy through adolescence.",
         image: "src/assets/img/ser1.webp",
     },
     {
         title: "Women Care",
-        description: "Holistic health  services designed to support every phase of a woman's life.",
+        description: "Complete women’s healthcare including gynecology, maternity, and wellness services designed for every stage of a woman's life.",
         image: "src/assets/img/ser2.jpg",
     },
     {
         title: "Family Care",
-        description: "Comprehensive care for your entire family under one trusted roof.",
+        description: "One-stop medical solutions for every family member, providing personalized care across all ages and health needs.",
         image: "src/assets/img/ser3.jpg",
     },
     {
         title: "Heart Care",
-        description: "Advanced cardiac care focused on prevention, diagnosis, and recovery.",
+        description: "Advanced cardiology services offering heart disease prevention, diagnosis, treatment, and rehabilitation by leading specialists.",
         image: "src/assets/img/ser4.jpg",
     },
     {
         title: "Eye Care",
-        description: "Expert ophthalmology services helping you see the world clearly.",
+        description: "Comprehensive eye health services including vision testing, eye surgeries, and ongoing treatment from experienced ophthalmologists.",
         image: "src/assets/img/ser5.webp",
     },
     {
         title: "Diagnostics",
-        description: "State-of-the-art diagnostic tools for accurate and timely health insights.",
+        description: "Accurate and timely diagnostic services with modern lab facilities to support effective treatment and early disease detection.",
         image: "src/assets/img/ser6.jpg",
     },
 ];
+
 
 const ServicesPage = () => {
     const [selectedService, setSelectedService] = useState(null);

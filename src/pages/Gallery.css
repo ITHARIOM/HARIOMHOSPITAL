@@ -1,43 +1,78 @@
-/* Modal for full image */
-/* Modal Styles */
+/* Reset spacing */
+ul.portfolio {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Gallery Items */
 .item-thumbs {
   list-style: none;
   position: relative;
-  width: calc(25% - 1rem);
   cursor: pointer;
   overflow: hidden;
   border-radius: 8px;
-  height: 200px; /* 👈 Fixed height for uniform sizing */
+  flex: 1 1 calc(25% - 1rem); /* Desktop: 4 items per row */
+  max-width: calc(25% - 1rem);
+  height: 200px;
 }
 
 .item-thumbs img {
   width: 100%;
-  height: 100%; /* 👈 Fill the container vertically */
-  object-fit: cover; /* 👈 Ensures uniform aspect and cropping */
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 8px;
 }
 
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .item-thumbs {
+    flex: 1 1 calc(33.33% - 1rem); /* Tablet: 3 per row */
+    max-width: calc(33.33% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .item-thumbs {
+    flex: 1 1 calc(50% - 1rem); /* Small tablets: 2 per row */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .item-thumbs {
+    flex: 1 1 100%; /* Mobile: 1 per row */
+    max-width: 100%;
+  }
+}
+
+/* Modal Styles */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  padding: 1rem;
 }
 
 .modal-content {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  background: white;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: #fff;
   border-radius: 8px;
-  padding: 10px;
+  overflow: hidden;
+  padding: 0.5rem;
 }
 
 .modal-img {
@@ -52,46 +87,10 @@
   right: -10px;
   background: #fff;
   color: #000;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  padding: 4px 12px;
   border-radius: 50%;
+  padding: 5px 10px;
   cursor: pointer;
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.modal-content {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.modal-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.modal-close {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background: white;
-    color: black;
-    font-size: 24px;
-    border-radius: 50%;
-    padding: 5px 10px;
-    cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }

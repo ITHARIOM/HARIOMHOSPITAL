@@ -14,6 +14,7 @@ import welcome from "@/assets/img/welcome.jpg"
 import pat1 from "@/assets/img/pt1.jpg"
 import pat2 from "@/assets/img/pt2.jpg"
 import pat3 from "@/assets/img/pt3.jpg"
+import post from "@/assets/img/post.jpg"
 import { useEffect, useState } from "react"
 import { color } from "framer-motion"
 import "./Home.css";
@@ -64,27 +65,27 @@ const Home = () => {
 
       {/* We Care Section */}
       <section className="txt-area classy-section elegant-section">
-  <div className="marquee-wrapper">
-    <div className="marquee blink-text">
-      <span>
-        हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan •{" "}
-      </span>
-    </div>
-  </div>
+        <div className="marquee-wrapper">
+          <div className="marquee blink-text">
+            <span>
+              हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan •{" "}
+            </span>
+          </div>
+        </div>
 
-  <div className="elegant-slogan-wrapper text-center">
-    <h1 className="elegant-slogan-title">
-      <span className="slogan-hindi">आपका स्वास्थ्य, हमारी सेवा</span>
-      <span className="slogan-english">Your Health is Our Mission</span>
-    </h1>
-    <p className="elegant-slogan-subtitle">
-      हम बिना किसी खर्च के इलाज करते हैं। इलाज, सेवा और प्यार – हर किसी के लिए।<br />
-      <span className="italic text-gray-600">
-        We provide free medical care with love and dignity to everyone in need.
-      </span>
-    </p>
-  </div>
-</section>
+        <div className="elegant-slogan-wrapper text-center">
+          <h1 className="elegant-slogan-title">
+            <span className="slogan-hindi">आपका स्वास्थ्य, हमारी सेवा</span>
+            <span className="slogan-english">Your Health is Our Mission</span>
+          </h1>
+          <p className="elegant-slogan-subtitle">
+            हम बिना किसी खर्च के इलाज करते हैं। इलाज, सेवा और प्यार – हर किसी के लिए।<br />
+            <span className="italic text-gray-600">
+              We provide free medical care with love and dignity to everyone in need.
+            </span>
+          </p>
+        </div>
+      </section>
 
       {/* Services Section */}
       <section id="services" className="services-section elegant-section">
@@ -159,6 +160,18 @@ const Home = () => {
           </div>
         </div>
       </section>
+      {/* Poster Section */}
+      <section className="poster-section text-center" style={{ padding: '40px 0', backgroundColor: '#f8f9fa' }}>
+        <div className="container">
+          <img
+            src={post} // Update path as needed
+            alt="Awareness Poster"
+            className="img-fluid"
+            style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)' }}
+          />
+        </div>
+      </section>
+
       <section id="events" className="events-section">
         <div className="container">
           <div className="section-header text-center">

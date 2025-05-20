@@ -30,34 +30,25 @@ const Gallery = () => {
             />
 
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="clearfix" />
-                        <div className="row">
-                            <section id="projects">
-                                <ul id="thumbs" className="portfolio">
-                                    {filteredItems.map((item, index) => (
-                                        <li
-                                            key={index}
-                                            className="item-thumbs col-lg-3"
-                                            data-id={`id-${index}`}
-                                            data-type={item.type}
-                                            onClick={() => setSelectedImage(item.src)}
-                                        >
-                                            <a className="hover-wrap" title="Click to view">
-                                                <span className="overlay-img"></span>
-                                                <span className="overlay-img-thumb">
-                                                    <i className="icon-info-blocks fa fa-search"></i>
-                                                </span>
-                                            </a>
-                                            <img src={item.src} alt={`Gallery ${index}`} />
-                                        </li>
-                                    ))}
-                                </ul>
-                            </section>
-                        </div>
-                    </div>
-                </div>
+                <section id="projects">
+                    <ul className="portfolio">
+                        {filteredItems.map((item, index) => (
+                            <li
+                                key={index}
+                                className="item-thumbs"
+                                onClick={() => setSelectedImage(item.src)}
+                            >
+                                <a className="hover-wrap" title="Click to view">
+                                    <span className="overlay-img" />
+                                    <span className="overlay-img-thumb">
+                                        <i className="icon-info-blocks fa fa-search" />
+                                    </span>
+                                </a>
+                                <img src={item.src} alt={`Gallery ${index}`} />
+                            </li>
+                        ))}
+                    </ul>
+                </section>
             </div>
 
             {/* Modal */}

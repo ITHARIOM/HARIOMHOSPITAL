@@ -2382,11 +2382,11 @@ textarea.error {
 }
 
 .about-text h5 {
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #333;
   margin-bottom: 15px;
-  line-height: 1.6;
+  line-height: 1.9;
 }
 
 .about-text p {
@@ -2915,7 +2915,7 @@ textarea.error {
 }
 
 .text-center p {
-  font-size: 1.35rem;
+  font-size: 1.7rem;
   color: #6c757d;
 }
 
