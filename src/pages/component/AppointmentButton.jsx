@@ -41,12 +41,7 @@ const AppointmentButton = () => {
                         <span className="close-button" onClick={handleToggleForm}>
                             &times;
                         </span>
-                        <h2>Book an Appointment</h2>
                         <form>
-                            <div className="form-group">
-                                <label>Select Department</label>
-                                <input type="text" placeholder="Select Department " />
-                            </div>
                             <div className="form-group">
                                 <label>Select Available Doctor</label>
                                 <select

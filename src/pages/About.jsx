@@ -13,9 +13,13 @@ const About = () => {
       <section className="about-elegant">
         <div className="container">
           <div className="intro">
-            <h2>सरल इलाज, सच्ची सेवा | Compassionate Care for All</h2>
+            <h2>सरल इलाज, सच्ची सेवा </h2>
             <p>
-              हरिओम जनसेवा संस्थान एक गैर-लाभकारी संस्था है जो हर वर्ग के लोगों को बिना किसी भेदभाव के निशुल्क चिकित्सा सेवा प्रदान करती है।
+              हरिओम जनसेवा संस्थान, बरौली (गोपालगंज, बिहार) में स्थित एक समर्पित और सेवा भाव से प्रेरित नि:शुल्क अस्पताल है, जिसकी स्थापना श्री दिलीप सिंह जी के द्वारा की गई थी। यह संस्थान केवल एक भवन नहीं, बल्कि एक सपने की पूर्ति है — एक ऐसा सपना जहाँ कोई भी व्यक्ति सिर्फ पैसों की कमी के कारण इलाज से वंचित न रहे।
+
+दिलीप सिंह जी का यह दृढ़ विश्वास था कि "सेवा ही सच्चा धर्म है", और उन्होंने उसी सोच को मूर्त रूप देने के लिए इस संस्थान की नींव रखी। यहाँ जरूरतमंद, गरीब और असहाय मरीजों को पूरी तरह नि:शुल्क चिकित्सा सेवाएं प्रदान की जाती हैं। दवाइयों से लेकर डॉक्टर की सलाह तक, हर सुविधा बिना किसी शुल्क के दी जाती है — ताकि हर व्यक्ति को सम्मानजनक और स्वस्थ जीवन जीने का अवसर मिल सके।
+
+हरिओम जनसेवा संस्थान न केवल एक अस्पताल है, बल्कि यह एक आंदोलन है — करुणा, सहानुभूति और समाज सेवा का। यह संस्थान आज सैकड़ों लोगों के लिए आशा की किरण बन चुका है, और आगे भी यही प्रयास रहेगा कि हम अधिक से अधिक लोगों तक निःस्वार्थ सेवा पहुँचा सकें।
               <br /><br />
               Hariom Jansewa Hospital is a non-profit organization dedicated to providing completely free healthcare to the underprivileged using simple and accessible communication methods.
             </p>
@@ -43,24 +47,24 @@ const About = () => {
           </div>
 
           <div className="features">
-            <h3>हम क्यों खास हैं? | Why Choose Us</h3>
+            <h3>हम क्यों खास हैं?</h3>
             <div className="features-grid">
               <div className="feature" style={{ backgroundColor: '#C94C4C' }}>
                 <i className="fas fa-hand-holding-heart icon" />
                 <h4>24×7 Emergency</h4>
-                <p>Highly trained doctors available 24×7 with ICU & NICU specialties, delivering near-zero error emergency care.</p>
+                <p>प्रशिक्षित डॉक्टरों की टीम, ICU और NICU जैसी विशेष सुविधाओं के साथ, लगभग शून्य त्रुटि वाली आपातकालीन चिकित्सा सेवा प्रदान करती है।"</p>
               </div>
 
               <div className="feature" style={{ backgroundColor: '#217A57' }}>
                 <i className="fas fa-clinic-medical icon" />
                 <h4>OPD Services</h4>
-                <p>Special outpatient care for those who cannot stay overnight, with personalized support and timely diagnosis.</p>
+                <p>जो मरीज़ रातभर अस्पताल में नहीं ठहर सकते, उनके लिए विशेष बाह्य रोगी सेवा (OPD) उपलब्ध है, जिसमें व्यक्तिगत देखभाल और समय पर निदान सुनिश्चित किया जाता है।</p>
               </div>
 
               <div className="feature" style={{ backgroundColor: '#268FC5' }}>
                 <i className="fas fa-vials icon" />
                 <h4>Lab Services</h4>
-                <p>Cost-effective, accurate, and safe diagnostics delivered in a compassionate and secure environment.</p>
+                <p>कम लागत में सटीक, सुरक्षित और विश्वसनीय डायग्नोस्टिक सेवाएं एक संवेदनशील और सुरक्षित वातावरण में प्रदान की जाती हैं।</p>
               </div>
             </div>
           </div>

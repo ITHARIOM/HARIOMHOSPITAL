@@ -176,7 +176,7 @@ const Home = () => {
                   <iframe
                     // src="https://www.youtube.com/embed/"
                     title="Autoplay Muted Video"
-                    src={`https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&controls=1&loop=1&playlist=dQw4w9WgXcQ`}
+                    src={`https://www.youtube-nocookie.com/embed/K9eQHTHiaL0?si=qn9TWEvoV0C6dtLV`}
 
                     allow="autoplay; encrypted-media"
                     allowFullScreen
@@ -186,8 +186,8 @@ const Home = () => {
                 </div>
                 <div className="event-content">
                   <time dateTime="2023-02-01">
-                    <span className="year">2023</span>{" "}
-                    <span className="month">Feb</span>
+                    <span className="year">2024</span>{" "}
+                    <span className="month">April</span>
                   </time>
                   <p>Annual Health Check-up Camp organized with community support.</p>
                 </div>
