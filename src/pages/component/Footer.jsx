@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Us</h4>
             <ul>
-              <li><i className="fas fa-map-marker-alt"></i> Barauli, Gopalganj, Bihar</li>
+              <li><i className="fas fa-map-marker-alt"></i> Badheya, Gopalganj, Bihar</li>
               <li><i className="fas fa-phone-alt"></i> +91 9264496798</li>
               <li><i className="fas fa-envelope"></i> hariomjanseva2021@gmail.com</li>
             </ul>

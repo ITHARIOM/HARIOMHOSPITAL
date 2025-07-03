@@ -79,7 +79,7 @@ const Home = () => {
             <span className="slogan-english">Your Health is Our Mission</span>
           </h1>
           <p className="elegant-slogan-subtitle">
-            हम बिना किसी खर्च के इलाज करते हैं। इलाज, सेवा और प्यार – हर किसी के लिए।<br />
+            हम बिना किसी खर्च के इलाज करते हैं इलाज, सेवा और प्यार – हर किसी के लिए।<br />
             <span className="italic text-gray-600">
               We provide free medical care with love and dignity to everyone in need.
             </span>
@@ -91,18 +91,20 @@ const Home = () => {
       <section id="services" className="services-section elegant-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title">Our Medical Services</h2>
+            <h2 className="section-title"> हमारी चिकित्सा सुविधाएँ </h2>
             <p className="section-subtitle">
-              Trusted care from expert hands — tailored for every stage of life.
+              
             </p>
           </div>
 
           <div className="service-grid">
             {[
-              { img: png1, title: "Gynecologist", desc: "Comprehensive care for women’s reproductive health, from adolescence through menopause." },
-              { img: png2, title: "General Physician", desc: "Expert diagnosis and treatment for a wide range of general health concerns and illnesses." },
-              { img: png3, title: "Orthopedic Specialist", desc: "Specialized care for bones, joints, and muscles — helping you move with ease." },
-              { img: png4, title: "Cardiologist", desc: "Heart health experts offering preventive, diagnostic, and interventional cardiac care." }
+              { img: png1, title: "स्त्री एवं प्रसूति रोग विशेषज्ञ", desc: "किशोरावस्था से लेकर रजोनिवृत्ति तक — महिलाओं के प्रजनन स्वास्थ्य के लिए संपूर्ण और संवेदनशील देखभाल।" },
+              { img: png2, title: "जेनरल फिजिशियन", desc: "सामान्य स्वास्थ्य समस्याओं और बीमारियों के लिए विशेषज्ञ निदान और प्रभावी उपचार।" },
+              { img: png3, title: "हड्डी रोग विशेषज्ञ", desc: "हड्डियों, जोड़ों और मांसपेशियों की विशेषज्ञ देखभाल — ताकि आप आसानी से चल-फिर सकें।" },
+              { img: png4, title: " कार्डियोलॉजिस्ट ", desc: "हृदय रोगों के विशेषज्ञ — रोकथाम, निदान और इंटरवेंशनल कार्डिएक केयर में उत्कृष्ट सेवाएँ।" }
+              
+              
             ].map((service, index) => (
               <div className="service-card" key={index}>
                 <div className="icon-wrapper">
@@ -119,7 +121,7 @@ const Home = () => {
       <section className="about-section elegant-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title" style={{ color: '#ffffff' }}>Welcome!</h2>
+            <h2 className="section-title" style={{ color: '#ffffff' }}>सुस्वागतम्!</h2>
             <p className="section-subtitle" style={{ color: '#ffffff' }}>
               हरिओम जनसेवा संस्थान
             </p>
@@ -198,11 +200,11 @@ const Home = () => {
                   ></iframe>
                 </div>
                 <div className="event-content">
-                  <time dateTime="2023-02-01">
-                    <span className="year">2024</span>{" "}
+                  <time dateTime="2025-05-09">
+                    <span className="year">2025</span>{" "}
                     <span className="month">April</span>
                   </time>
-                  <p>Annual Health Check-up Camp organized with community support.</p>
+                  <p>हरिओम जनसेवा संस्थान का भव्य उद्घाटन समारोह</p>
                 </div>
               </div>
             </div>
@@ -211,7 +213,7 @@ const Home = () => {
               <div className="event-card">
                 <div className="video-wrapper" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
                   <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_2"
+                    src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fyoutube.com%2Fshorts%2F57SKw6ajzic%3Fsi%3D61LZIFZzQjqXJdop&key=925108d922be940af814f71907a7df4b"
                     title="Event Video 2"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -220,16 +222,16 @@ const Home = () => {
                   ></iframe>
                 </div>
                 <div className="event-content">
-                  <time dateTime="2023-03-01">
-                    <span className="year">2023</span>{" "}
-                    <span className="month">Mar</span>
+                  <time dateTime="2025-04-09">
+                    <span className="year">2025</span>{" "}
+                    <span className="month">April </span>
                   </time>
-                  <p>Women's Health Awareness Week – Seminars and Free Consultations.</p>
+                  <p> HOSPITAL TOUR </p>
                 </div>
               </div>
             </div>
 
-            <div className="col-md-4 col-sm-6 mb-4">
+            {/* <div className="col-md-4 col-sm-6 mb-4">
               <div className="event-card">
                 <div className="video-wrapper" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
                   <iframe
@@ -243,13 +245,13 @@ const Home = () => {
                 </div>
                 <div className="event-content">
                   <time dateTime="2023-04-01">
-                    <span className="year">2023</span>{" "}
+                    <span className="year">2025</span>{" "}
                     <span className="month">Apr</span>
                   </time>
-                  <p>Free Eye Check-up Campaign in collaboration with NGOs.</p>
+                  <p></p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

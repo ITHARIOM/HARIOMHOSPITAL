@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/img/logo234.png";
+import logo from "@/assets/img/logo.png";
 import { faPhone, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -49,7 +49,7 @@ const Header = () => {
                 }}
               >
                 <i className="fas fa-map-marker-alt" style={{ marginRight: 6, color: "#e74c3c" }}></i>
-                <span>Barauli, Gopalganj, Bihar - 841405</span>
+                <span>बढ़ेया, गोपालगंज, बिहार  - 841405</span>
               </a>
             </div>
 
@@ -79,7 +79,7 @@ const Header = () => {
               </a>
 
               <a
-                href="tel:+919864496798"
+                href="tel:+919264496798"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -88,7 +88,7 @@ const Header = () => {
                 }}
               >
                 <i className="fas fa-phone-alt" style={{ marginRight: 6, color: "#1abc9c" }}></i>
-                <span>(+91) 9864496798</span>
+                <span>(+91) 9264496798 </span>
               </a>
 
               <div style={{ display: "flex", alignItems: "center" }}>

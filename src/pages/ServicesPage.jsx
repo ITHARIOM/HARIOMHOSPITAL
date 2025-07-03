@@ -4,34 +4,34 @@ import SectionHeader from "./component/SectionHeader";
 
 const services = [
     {
-        title: "Child Care",
+        title: "शिशु रोग विशेषज्ञ ",
         description: "Comprehensive pediatric services tailored to ensure your child's health, growth, and development from infancy through adolescence.",
         image: "src/assets/img/ser1.webp",
     },
     {
-        title: "Women Care",
-        description: "Complete women’s healthcare including gynecology, maternity, and wellness services designed for every stage of a woman's life.",
-        image: "src/assets/img/ser2.jpg",
+        title: "जेनरल फिजिशियन",
+        description: "Expert diagnosis and treatment for a wide range of general health concerns and illnesses.",
+        image: "src/assets/img/2.png",
     },
+    // {
+    //     title: "Family Care",
+    //     description: "One-stop medical solutions for every family member, providing personalized care across all ages and health needs.",
+    //     image: "src/assets/img/ser3.jpg",
+    // },
     {
-        title: "Family Care",
-        description: "One-stop medical solutions for every family member, providing personalized care across all ages and health needs.",
-        image: "src/assets/img/ser3.jpg",
-    },
-    {
-        title: "Heart Care",
+        title: "कार्डियोलॉजिस्ट",
         description: "Advanced cardiology services offering heart disease prevention, diagnosis, treatment, and rehabilitation by leading specialists.",
-        image: "src/assets/img/ser4.jpg",
+        image: "src/assets/img/4.png",
     },
     {
-        title: "Eye Care",
-        description: "Comprehensive eye health services including vision testing, eye surgeries, and ongoing treatment from experienced ophthalmologists.",
-        image: "src/assets/img/ser5.webp",
+        title: "स्त्री एवं प्रसूति रोग विशेषज्ञ",
+        description: "Comprehensive care for women’s reproductive health, from adolescence through menopause.",
+        image: "src/assets/img/1.png",
     },
     {
-        title: "Diagnostics",
-        description: "Accurate and timely diagnostic services with modern lab facilities to support effective treatment and early disease detection.",
-        image: "src/assets/img/ser6.jpg",
+        title: "हड्डी रोग विशेषज्ञ",
+        description: "Specialized care for bones, joints, and muscles — helping you move with ease.",
+        image: "src/assets/img/3.png",
     },
 ];
 
@@ -49,7 +49,7 @@ const ServicesPage = () => {
 
     return (
         <>
-            <SectionHeader title="Our Services" subtitle={"Explore our comprehensive range of healthcare services tailored to meet your unique needs."} />
+            <SectionHeader title="Our Services" subtitle={""} />
 
             <div className="services-page">
                 {/* <div className="services-header">
