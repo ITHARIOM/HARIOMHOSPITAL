@@ -12,6 +12,7 @@ const About = () => {
 
       <section className="about-elegant">
         <div className="container">
+
           <div className="intro">
             <h2>सरल इलाज, सच्ची सेवा </h2>
             <p>

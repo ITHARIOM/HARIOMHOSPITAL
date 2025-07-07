@@ -73,7 +73,7 @@
   padding: 10px;
   border: none;
   background: transparent;
-  color: #fff;
+  color: #dbdbdb;
   outline: none;
 }
 
@@ -125,6 +125,6 @@
   }
 
   .footer-section {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 }
