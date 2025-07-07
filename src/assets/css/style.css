@@ -101,16 +101,15 @@ header .navbar {
   border: none;
 }
 
-.navbar-brand {
+/* .navbar-brand {
   color: #222;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
   line-height: 1em;
   letter-spacing: -1px;
-  margin-top: 9px;
-  padding: 0 0 0 15px;
-}
+  margin-top: 0px;
+  } */
 .navbar-default .navbar-brand {
   color: #d81265;
   background: #0accce;
@@ -145,7 +144,7 @@ header .navbar-collapse ul.navbar-nav {
 header .navbar {
   min-height: 70px;
   padding: 18px 0;
-  background: #fff;
+  background: #5adbb2;
 }
 .home-page header .navbar-default {
   background: rgba(255, 255, 255, 1);
@@ -644,7 +643,7 @@ img.img-center {
   font-style: italic;
 }
 section.txt-area {
-  background: #fff;
+  background: #fcfcfc;
   padding: 20px 0px 20px 0;
 }
 
@@ -2382,15 +2381,14 @@ textarea.error {
 }
 
 .about-text h5 {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   font-weight: 500;
-  color: #333;
   margin-bottom: 15px;
   line-height: 1.9;
 }
 
 .about-text p {
-  font-size: 1.35rem;
+  font-size: 1.8rem;
   color: #555;
   margin-bottom: 20px;
 }
@@ -2402,7 +2400,7 @@ textarea.error {
 
 .features-list li {
   margin-bottom: 10px;
-  font-size: 1.35rem;
+  font-size: 1.7rem !important;
   color: #444;
   display: flex;
   align-items: center;
@@ -2513,7 +2511,7 @@ textarea.error {
 .section-header h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #0accce;
+  color: #005051;
   margin-bottom: 10px;
 }
 
@@ -2982,12 +2980,13 @@ textarea.error {
   transition: all 0.3s ease;
 }
 .nav > li > a {
-  font-weight: 600;
+  font-weight: 800 !important;
   text-transform: uppercase;
   color: #333 !important;
 }
 .nav > li.active > a {
-  color: #007bff !important;
+  color: #045fc0 !important;
+  font-weight: 1000 !important;
 }
 
 /* Gallery.css */

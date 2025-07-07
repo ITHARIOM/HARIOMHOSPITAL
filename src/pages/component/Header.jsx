@@ -25,7 +25,7 @@ const Header = () => {
       {/* Navbar */}
       <header style={{ position: "fixed", width: "100%", zIndex: 999, top: 0 }}>
         {/* Elegant Top Strip */}
-        <div style={{ background: "#0F1A2F", padding: "10px 0", fontSize: "14px", color: "#fff" }}>
+        <div style={{ background: "#0F1A2F", padding: "10px 0", fontSize: "15px", color: "#fff" }}>
           <div
             className="container"
             style={{
@@ -119,7 +119,7 @@ const Header = () => {
                 <span className="icon-bar" />
                 <span className="icon-bar" />
               </button>
-              <a className="navbar-brand" href="/">
+              <a className="navbar-brand" href="/" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <img style={{ height: 100 }} src={logo} alt="logo" />
               </a>
             </div>

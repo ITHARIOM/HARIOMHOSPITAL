@@ -64,7 +64,7 @@ const Home = () => {
       </section>
 
       {/* We Care Section */}
-      <section className="txt-area classy-section elegant-section">
+      <section className="txt-area classy-section elegant-section fade-in-section">
         <div className="marquee-wrapper">
           <div className="marquee blink-text">
             <span>
@@ -118,10 +118,10 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="about-section elegant-section">
+      <section className="about-section elegant-section fade-in-section">
         <div className="container">
           <div className="section-header text-center">
-            <h2 className="section-title" style={{ color: '#ffffff' }}>सुस्वागतम्!</h2>
+            <h2 className="section-title" style={{ color: '#0acccd' }}>सुस्वागतम्!</h2>
             <p className="section-subtitle" style={{ color: '#ffffff' }}>
               हरिओम जनसेवा संस्थान
             </p>
@@ -163,7 +163,7 @@ const Home = () => {
         </div>
       </section>
       {/* Poster Section */}
-      <section className="poster-section text-center" style={{ padding: '40px 0', backgroundColor: '#f8f9fa' }}>
+      <section className="poster-section text-center" style={{ padding: '40px 0', backgroundColor: '#C6EFEF' }}>
         <div className="container">
           <img
             src={post} // Update path as needed
@@ -174,7 +174,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="events" className="events-section">
+      <section id="events" className="events-section fade-in-section">
         <div className="container">
           <div className="section-header text-center">
             <h2>Our Events</h2>

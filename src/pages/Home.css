@@ -1,7 +1,47 @@
+  /* color: #005051 !important; */
+
+
 .services-section {
   padding: 80px 20px;
-  background: linear-gradient(to right, #f9f9ff, #ffffff);
+  background: linear-gradient(135deg, #5adbb2, #ffffff);
   font-family: 'Poppins', sans-serif;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  transition: background 0.3s ease;
+}
+
+/* Optional hover effect */
+.services-section:hover {
+  background: linear-gradient(135deg, #5adbb2, #d3f7eb);
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-section {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Reuse or define this if not already present */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section-header {
@@ -9,17 +49,17 @@
 }
 
 .section-title {
-  font-size: 2.8rem;
-  font-weight: 600;
-  color: #0acccd;
-  margin-bottom: 10px;
+  font-size: 3.8rem !important;
+  font-weight: 600 !important;
+  /* color: #0acccd !important; */
+  margin-bottom: 10px !important;
 }
 
 .section-subtitle {
-  font-size: 1.5rem;
-  color: #475569;
-  max-width: 600px;
-  margin: 0 auto;
+  font-size: 2.0rem !important;
+  color: #dae6f7 !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
 }
 
 .service-grid {
@@ -175,6 +215,7 @@
 }
 
 .section-title {
+  /* color: #005051 !important; */
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 10px;
