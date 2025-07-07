@@ -26,7 +26,7 @@ const Gallery = () => {
         <>
             <SectionHeader
                 title="Gallery"
-                subtitle="Browse through moments that capture the heart of our healthcare journey and patient care."
+                subtitle=""
             />
 
             <div className="container">
