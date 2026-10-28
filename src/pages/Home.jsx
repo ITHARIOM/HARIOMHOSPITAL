@@ -1,264 +1,281 @@
+import { useEffect, useState } from "react";
 
+import slide1 from "@/assets/img/slides/front-img.jpg";
+import slide2 from "@/assets/img/slides/front22.jpg";
+import png1 from "@/assets/img/1.png";
+import png2 from "@/assets/img/2.png";
+import png3 from "@/assets/img/3.png";
+import png4 from "@/assets/img/4.png";
+import welcome from "@/assets/img/welcome.jpg";
+import post from "@/assets/img/post.jpg";
 
-// import React from 'react';
-
-import slide1 from "@/assets/img/slides/front-img.jpg"
-import slide2 from "@/assets/img/slides/front22.jpg"
-import png1 from "@/assets/img/1.png"
-import png2 from "@/assets/img/2.png"
-import png3 from "@/assets/img/3.png"
-import png4 from "@/assets/img/4.png"
-import png5 from "@/assets/img/5.png"
-import png6 from "@/assets/img/6.png"
-import welcome from "@/assets/img/welcome.jpg"
-import pat1 from "@/assets/img/pt1.jpg"
-import pat2 from "@/assets/img/pt2.jpg"
-import pat3 from "@/assets/img/pt3.jpg"
-import post from "@/assets/img/post.jpg"
-import { useEffect, useState } from "react"
-import { color } from "framer-motion"
 import "./Home.css";
+
+const slides = [
+  {
+    image: slide1,
+    /*title: "हरिओम जनसेवा संस्थान",
+    subtitle: "हर रोगी को निःशुल्क सेवा, हरिओम का संकल्प",*/
+  },
+  {
+    image: slide2,
+    /*title: "हरिओम जनसेवा",
+    subtitle: "गरीबों की सेवा, हरिओम का लक्ष्य",*/
+  },
+];
+
+const services = [
+  {
+    img: png1,
+    title: "स्त्री एवं प्रसूति रोग विशेषज्ञ",
+    desc: "किशोरावस्था से लेकर रजोनिवृत्ति तक — महिलाओं के प्रजनन स्वास्थ्य के लिए संपूर्ण और संवेदनशील देखभाल।",
+  },
+  {
+    img: png2,
+    title: "जेनरल फिजिशियन",
+    desc: "सामान्य स्वास्थ्य समस्याओं और बीमारियों के लिए विशेषज्ञ निदान और प्रभावी उपचार।",
+  },
+  {
+    img: png3,
+    title: "हड्डी रोग विशेषज्ञ",
+    desc: "हड्डियों, जोड़ों और मांसपेशियों की विशेषज्ञ देखभाल — ताकि आप आसानी से चल-फिर सकें।",
+  },
+  {
+    img: png4,
+    title: "कार्डियोलॉजिस्ट",
+    desc: "हृदय रोगों के विशेषज्ञ — रोकथाम, निदान और इंटरवेंशनल कार्डिएक केयर में उत्कृष्ट सेवाएँ।",
+  },
+];
+
+const features = [
+  "निःशुल्क ओपीडी सेवाएं (जनरल फिजिशियन, विशेषज्ञ डॉक्टर)",
+  "मुफ्त दवाइयों की सुविधा",
+  "फ्री लैब जांच और टेस्ट",
+  "समय-समय पर निःशुल्क चिकित्सा शिविर",
+];
+
+const events = [
+  {
+    id: "inauguration",
+    src: "https://www.youtube-nocookie.com/embed/K9eQHTHiaL0?si=qn9TWEvoV0C6dtLV",
+    title: "उद्घाटन समारोह का वीडियो",
+    dateTime: "2025-04",
+    year: "2025",
+    month: "April",
+    text: "हरिओम जनसेवा संस्थान का भव्य उद्घाटन समारोह",
+  },
+  {
+    id: "tour",
+    src: "https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fyoutube.com%2Fshorts%2F57SKw6ajzic%3Fsi%3D61LZIFZzQjqXJdop&key=925108d922be940af814f71907a7df4b",
+    title: "अस्पताल का वीडियो टूर",
+    dateTime: "2025-04",
+    year: "2025",
+    month: "April",
+    text: "HOSPITAL TOUR",
+  },
+];
+
+const marqueeText =
+  "हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • ";
+
 const Home = () => {
-  const slides = [
-    {
-      image: slide1,
-      title: "हरिओम जनसेवा संस्थान",
-      subtitle: "हर रोगी को निःशुल्क सेवा, हरिओम का संकल्प",
-    },
-    {
-      image: slide2,
-      title: "हरिओम जनसेवा",
-      subtitle: "गरीबों की सेवा, हरिओम का लक्ष्य",
-    },
-  ];
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  // Auto-advance every 5 seconds, stop while the visitor hovers or focuses the slider
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 5000); // Change slide every 5 seconds
+    if (paused) return undefined;
+    const id = setInterval(() => {
+      setCurrent((i) => (i + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [paused]);
 
-    return () => clearInterval(interval);
-  }, [slides.length]);
+  const goTo = (index) => setCurrent((index + slides.length) % slides.length);
+
   return (
-    <>
-
-
-      <section id="banner" className="custom-banner-section">
-        <div className="custom-banner-slider-container">
-          {slides.map((slide, index) => (
+    <div className="hm-page">
+      {/* ---------- 1. Slider ---------- */}
+      <section
+        id="banner"
+        className="hm-hero"
+        aria-roledescription="carousel"
+        aria-label="हरिओम जनसेवा संस्थान"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onFocus={() => setPaused(true)}
+        onBlur={() => setPaused(false)}
+      >
+        <div className="hm-hero__stage">
+          {slides.map((slide, i) => (
             <div
-              key={index}
-              className={`custom-banner-slide ${index === currentIndex ? "active" : ""}`}
+              key={slide.title}
+              className={`hm-slide${i === current ? " is-active" : ""}`}
+              aria-hidden={i !== current}
             >
-              <img src={slide.image} alt={slide.title} />
-              <div className="custom-banner-slide-caption">
-                <h2>{slide.title}</h2>
-                <p>{slide.subtitle}</p>
-
-              </div>
+              {/* blurred copy fills the empty sides, sharp copy is never cropped */}
+              <div
+                className="hm-slide__bg"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+              <img className="hm-slide__img" src={slide.image} alt={slide.title} />
             </div>
           ))}
-        </div>
-      </section>
 
-      {/* We Care Section */}
-      <section className="txt-area classy-section elegant-section fade-in-section">
-        <div className="marquee-wrapper">
-          <div className="marquee blink-text">
-            <span>
-              हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan • हरिओम जनसेवा संस्थान • Hariom Janseva Sansthan •{" "}
-            </span>
-          </div>
+          <button
+            type="button"
+            className="hm-arrow hm-arrow--prev"
+            onClick={() => goTo(current - 1)}
+            aria-label="पिछली स्लाइड"
+          >
+            <i className="fa fa-chevron-left" aria-hidden="true" />
+          </button>
+          <button
+            type="button"
+            className="hm-arrow hm-arrow--next"
+            onClick={() => goTo(current + 1)}
+            aria-label="अगली स्लाइड"
+          >
+            <i className="fa fa-chevron-right" aria-hidden="true" />
+          </button>
         </div>
 
-        <div className="elegant-slogan-wrapper text-center">
-          <h1 className="elegant-slogan-title">
-            <span className="slogan-hindi">आपका स्वास्थ्य, हमारी सेवा</span>
-            <span className="slogan-english">Your Health is Our Mission</span>
-          </h1>
-          <p className="elegant-slogan-subtitle">
-            हम बिना किसी खर्च के इलाज करते हैं इलाज, सेवा और प्यार – हर किसी के लिए।<br />
-            <span className="italic text-gray-600">
-              We provide free medical care with love and dignity to everyone in need.
-            </span>
-          </p>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="services-section elegant-section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="section-title"> हमारी चिकित्सा सुविधाएँ </h2>
-            <p className="section-subtitle">
-              
-            </p>
+        <div className="hm-hero__bar">
+          <div className="hm-hero__caption" aria-live="polite">
+            <h2>{slides[current].title}</h2>
+            <p>{slides[current].subtitle}</p>
           </div>
 
-          <div className="service-grid">
-            {[
-              { img: png1, title: "स्त्री एवं प्रसूति रोग विशेषज्ञ", desc: "किशोरावस्था से लेकर रजोनिवृत्ति तक — महिलाओं के प्रजनन स्वास्थ्य के लिए संपूर्ण और संवेदनशील देखभाल।" },
-              { img: png2, title: "जेनरल फिजिशियन", desc: "सामान्य स्वास्थ्य समस्याओं और बीमारियों के लिए विशेषज्ञ निदान और प्रभावी उपचार।" },
-              { img: png3, title: "हड्डी रोग विशेषज्ञ", desc: "हड्डियों, जोड़ों और मांसपेशियों की विशेषज्ञ देखभाल — ताकि आप आसानी से चल-फिर सकें।" },
-              { img: png4, title: " कार्डियोलॉजिस्ट ", desc: "हृदय रोगों के विशेषज्ञ — रोकथाम, निदान और इंटरवेंशनल कार्डिएक केयर में उत्कृष्ट सेवाएँ।" }
-              
-              
-            ].map((service, index) => (
-              <div className="service-card" key={index}>
-                <div className="icon-wrapper">
-                  <img src={service.img} alt={service.title} />
-                </div>
-                <h4>{service.title}</h4>
-                <p>{service.desc}</p>
-              </div>
+          <div className="hm-dots" role="tablist" aria-label="स्लाइड चुनें">
+            {slides.map((slide, i) => (
+              <button
+                key={slide.title}
+                type="button"
+                role="tab"
+                aria-selected={i === current}
+                aria-label={`स्लाइड ${i + 1}`}
+                className={`hm-dot${i === current ? " is-active" : ""}`}
+                onClick={() => goTo(i)}
+              />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="about-section elegant-section fade-in-section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2 className="section-title" style={{ color: '#0acccd' }}>सुस्वागतम्!</h2>
-            <p className="section-subtitle" style={{ color: '#ffffff' }}>
-              हरिओम जनसेवा संस्थान
-            </p>
-          </div>
-
-          <div className="about-content-wrapper">
-            <div className="about-image">
-              <img src={welcome} alt="About Us Image" />
-            </div>
-            <div className="about-text">
-              <h5>
-                हरिओम जनसेवा संस्थान  एक निःस्वार्थ भाव से संचालित संस्था है, जिसका उद्देश्य जरूरतमंद और आर्थिक रूप से कमजोर वर्ग के लोगों को निःशुल्क चिकित्सा सेवाएं
-                उपलब्ध कराना है। यह अस्पताल मानवता की सेवा को ही सबसे बड़ा धर्म मानते हुए हर रोगी को बिना किसी शुल्क के इलाज, दवाइयाँ, परामर्श और अन्य जरूरी स्वास्थ्य सेवाएं प्रदान करता है।
-              </h5>
-              <p style={{ color: '#ffffff' }}>
-                हमारी विशेषताएं:
-              </p>
-              <ul className="features-list" style={{ color: '#ffffff' }}>
-                <li style={{ color: '#ffffff' }}>
-                  <i className="fa fa-arrow-circle-right" /> निःशुल्क ओपीडी सेवाएं (जनरल फिजिशियन, विशेषज्ञ डॉक्टर)
-
-                </li>
-                <li style={{ color: '#ffffff' }}>
-                  <i className="fa fa-arrow-circle-right" /> मुफ्त दवाइयों की सुविधा
-
-                </li >
-                <li style={{ color: '#ffffff' }}>
-                  <i className="fa fa-arrow-circle-right" /> फ्री लैब जांच और टेस्ट
-
-                </li>
-                <li style={{ color: '#ffffff' }}>
-                  <i className="fa fa-arrow-circle-right" />समय-समय पर निःशुल्क चिकित्सा शिविर
-
-                </li>
-
-              </ul>
-            </div>
+      {/* ---------- 2. Slogan ---------- */}
+      <section className="hm-slogan">
+        <div className="hm-marquee" aria-hidden="true">
+          <div className="hm-marquee__track">
+            <span>{marqueeText}</span>
+            <span>{marqueeText}</span>
           </div>
         </div>
-      </section>
-      {/* Poster Section */}
-      <section className="poster-section text-center" style={{ padding: '40px 0', backgroundColor: '#C6EFEF' }}>
-        <div className="container">
-          <img
-            src={post} // Update path as needed
-            alt="Awareness Poster"
-            className="img-fluid"
-            style={{ maxWidth: '100%', height: 'auto', borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.2)' }}
-          />
+
+        <div className="hm-wrap hm-slogan__body">
+          <h1 className="hm-slogan__title">
+            <span className="hm-slogan__hindi">आपका स्वास्थ्य, हमारी सेवा</span>
+            <span className="hm-slogan__english">Your Health is Our Mission</span>
+          </h1>
+          <p className="hm-slogan__text">
+            हम बिना किसी खर्च के इलाज करते हैं — इलाज, सेवा और प्यार, हर किसी के लिए।
+          </p>
+          <p className="hm-slogan__text hm-slogan__text--en">
+            We provide free medical care with love and dignity to everyone in need.
+          </p>
         </div>
       </section>
 
-      <section id="events" className="events-section fade-in-section">
-        <div className="container">
-          <div className="section-header text-center">
-            <h2>Our Events</h2>
-            <p>
-              We host a variety of events throughout the year aimed at community
-              wellness, education, and support. Stay connected with our latest
-              happenings.
-            </p>
+      {/* ---------- 3. Services ---------- */}
+      <section id="services" className="hm-section hm-services">
+        <div className="hm-wrap">
+          <h2 className="hm-title">हमारी चिकित्सा सुविधाएँ</h2>
+
+          <div className="hm-services__grid">
+            {services.map((service) => (
+              <article className="hm-service" key={service.title}>
+                <div className="hm-service__icon">
+                  <img src={service.img} alt="" />
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.desc}</p>
+              </article>
+            ))}
           </div>
-          <div className="row">
-            <div className="col-md-4 col-sm-6 mb-4">
-              <div className="event-card">
-                <div className="video-wrapper" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
-                  <iframe
-                    // src="https://www.youtube.com/embed/"
-                    title="Autoplay Muted Video"
-                    src={`https://www.youtube-nocookie.com/embed/K9eQHTHiaL0?si=qn9TWEvoV0C6dtLV`}
+        </div>
+      </section>
 
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                    frameBorder="0"
-                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                  ></iframe>
-                </div>
-                <div className="event-content">
-                  <time dateTime="2025-05-09">
-                    <span className="year">2025</span>{" "}
-                    <span className="month">April</span>
-                  </time>
-                  <p>हरिओम जनसेवा संस्थान का भव्य उद्घाटन समारोह</p>
-                </div>
-              </div>
-            </div>
+      {/* ---------- 4. Welcome ---------- */}
+      <section className="hm-section hm-welcome">
+        <div className="hm-wrap hm-welcome__grid">
+          <div className="hm-welcome__photo">
+            <img src={welcome} alt="हरिओम जनसेवा संस्थान" />
+          </div>
 
-            <div className="col-md-4 col-sm-6 mb-4">
-              <div className="event-card">
-                <div className="video-wrapper" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+          <div className="hm-welcome__text">
+            <h2 className="hm-welcome__title">सुस्वागतम्!</h2>
+            <p className="hm-welcome__name">हरिओम जनसेवा संस्थान</p>
+
+            <p className="hm-welcome__lead">
+              हरिओम जनसेवा संस्थान एक निःस्वार्थ भाव से संचालित संस्था है, जिसका उद्देश्य जरूरतमंद
+              और आर्थिक रूप से कमजोर वर्ग के लोगों को निःशुल्क चिकित्सा सेवाएं उपलब्ध कराना है। यह
+              अस्पताल मानवता की सेवा को ही सबसे बड़ा धर्म मानते हुए हर रोगी को बिना किसी शुल्क के
+              इलाज, दवाइयाँ, परामर्श और अन्य जरूरी स्वास्थ्य सेवाएं प्रदान करता है।
+            </p>
+
+            <h3 className="hm-welcome__sub">हमारी विशेषताएं</h3>
+            <ul className="hm-features">
+              {features.map((item) => (
+                <li key={item}>
+                  <i className="fa fa-check-circle" aria-hidden="true" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- 5. Poster ---------- */}
+      <section className="hm-section hm-poster">
+        <div className="hm-wrap">
+          <img src={post} alt="जागरूकता पोस्टर" />
+        </div>
+      </section>
+
+      {/* ---------- 6. Events ---------- */}
+      <section id="events" className="hm-section hm-events">
+        <div className="hm-wrap">
+          <h2 className="hm-title">हमारे कार्यक्रम | Our Events</h2>
+          <p className="hm-events__intro">
+            समाज के स्वास्थ्य, शिक्षा और सहयोग के लिए हम साल भर कार्यक्रम आयोजित करते हैं। हमारी
+            ताज़ा गतिविधियों से जुड़े रहें।
+          </p>
+
+          <div className="hm-events__grid">
+            {events.map((event) => (
+              <article className="hm-event" key={event.id}>
+                <div className="hm-event__video">
                   <iframe
-                    src="https://cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fyoutube.com%2Fshorts%2F57SKw6ajzic%3Fsi%3D61LZIFZzQjqXJdop&key=925108d922be940af814f71907a7df4b"
-                    title="Event Video 2"
-                    frameBorder="0"
+                    src={event.src}
+                    title={event.title}
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
-                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                  ></iframe>
+                  />
                 </div>
-                <div className="event-content">
-                  <time dateTime="2025-04-09">
-                    <span className="year">2025</span>{" "}
-                    <span className="month">April </span>
+                <div className="hm-event__body">
+                  <time dateTime={event.dateTime}>
+                    {event.month} {event.year}
                   </time>
-                  <p> HOSPITAL TOUR </p>
+                  <p>{event.text}</p>
                 </div>
-              </div>
-            </div>
-
-            {/* <div className="col-md-4 col-sm-6 mb-4">
-              <div className="event-card">
-                <div className="video-wrapper" style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
-                  <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID_3"
-                    title="Event Video 3"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                  ></iframe>
-                </div>
-                <div className="event-content">
-                  <time dateTime="2023-04-01">
-                    <span className="year">2025</span>{" "}
-                    <span className="month">Apr</span>
-                  </time>
-                  <p></p>
-                </div>
-              </div>
-            </div> */}
+              </article>
+            ))}
           </div>
         </div>
       </section>
-
-    </>
-
+    </div>
   );
-}
+};
 
 export default Home;

@@ -1,26 +1,40 @@
+
 import React from "react";
+import "./SectionHeader.css";
 
 const SectionHeader = ({
   title = "",
   subtitle = "",
-  background = "#0ACCCE",
+  background,
   textColor = "#ffffff",
   className = "",
-  paddingTop = 170,
-  paddingBottom = 60,
+  paddingTop,
+  paddingBottom,
 }) => {
   const sectionStyle = {
-    background,
+    ...(background ? { background } : {}),
     color: textColor,
-    paddingTop,
-    paddingBottom,
+    ...(paddingTop !== undefined ? { paddingTop } : {}),
+    ...(paddingBottom !== undefined ? { paddingBottom } : {}),
   };
 
   return (
-    <section className={`section-header text-center ${className}`} style={sectionStyle}>
-      <div className="container">
-        <h3 className="display-4 fw-bold" style={{ color: "white", textShadow: "2px 2px 4px rgb(0, 0, 0)" ,fontSize: "2.7rem"}}>{title}</h3>
-        <p className="lead mb-4" style={{color:"white"}}>{subtitle}</p>
+    <section
+      className={`section-header ${className}`.trim()}
+      style={sectionStyle}
+    >
+      <div className="section-header-content">
+        <span className="section-header-badge">
+          HARIOM JANSHEVA SANSTHAN
+        </span>
+
+        <h1>{title}</h1>
+
+        {subtitle && <p>{subtitle}</p>}
+
+        <div className="section-header-underline">
+          <span />
+        </div>
       </div>
     </section>
   );
