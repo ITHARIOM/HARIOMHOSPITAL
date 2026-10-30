@@ -3,53 +3,51 @@ import SectionHeader from './component/SectionHeader';
 import './About.css';
 
 const highlights = [
-  { label: 'दवाइयाँ', value: 'नि:शुल्क' },
-  { label: 'डॉक्टर की सलाह', value: 'नि:शुल्क' },
-  { label: 'आपातकालीन सेवा', value: '24×7' },
+  { label: 'Medicines', value: 'Free' },
+  { label: 'Doctor consultation', value: 'Free' },
+  { label: 'Emergency support', value: '24×7' },
 ];
 
 const values = [
-  { icon: '❤️', text: 'प्रेम और सेवा के साथ उपचार' },
-  { icon: '🚫', text: 'बिना किसी शुल्क के सेवा' },
-  { icon: '👨‍👩‍👧‍👦', text: 'समता और समान अवसर' },
-  { icon: '🙌', text: 'पारदर्शिता और विश्वास' },
+  { icon: '❤️', text: 'Compassionate and respectful care' },
+  { icon: '🚫', text: 'No-charge medical support for patients in need' },
+  { icon: '👨‍👩‍👧‍👦', text: 'Equality, dignity, and inclusion' },
+  { icon: '🙌', text: 'Transparency, trust, and care' },
 ];
 
 const services = [
   {
     key: 'emergency',
     icon: 'fas fa-hand-holding-heart',
-    title: '24×7 Emergency',
-    text: 'प्रशिक्षित डॉक्टरों की टीम, ICU और NICU जैसी विशेष सुविधाओं के साथ, लगभग शून्य त्रुटि वाली आपातकालीन चिकित्सा सेवा प्रदान करती है।',
+    title: '24×7 Emergency Care',
+    text: 'Our trained medical team provides quick, reliable emergency response with a strong focus on critical patient needs, compassion, and timely action.',
   },
   {
     key: 'opd',
     icon: 'fas fa-clinic-medical',
     title: 'OPD Services',
-    text: 'जो मरीज़ रातभर अस्पताल में नहीं ठहर सकते, उनके लिए विशेष बाह्य रोगी सेवा (OPD) उपलब्ध है, जिसमें व्यक्तिगत देखभाल और समय पर निदान सुनिश्चित किया जाता है।',
+    text: 'Patients can access well-structured outpatient services with prompt consultation, personalized attention, and expert diagnosis when needed.',
   },
   {
     key: 'lab',
     icon: 'fas fa-vials',
-    title: 'Lab Services',
-    text: 'कम लागत में सटीक, सुरक्षित और विश्वसनीय डायग्नोस्टिक सेवाएं एक संवेदनशील और सुरक्षित वातावरण में प्रदान की जाती हैं।',
+    title: 'Laboratory Services',
+    text: 'Accurate, affordable, and secure diagnostic testing is delivered in a safe environment to support early detection and effective treatment.',
   },
 ];
 
 const About = () => {
   return (
     <>
-      <SectionHeader title="About-Us" subtitle="" />
+      <SectionHeader title="About Us" subtitle="Compassionate healthcare for every life" />
 
       <main className="ab-page">
-        {/* 1. Hero */}
         <section className="ab-hero">
           <div className="ab-wrap ab-hero__grid">
             <div className="ab-hero__text">
-              <h2 className="ab-hero__title">सरल इलाज,<br />सच्ची सेवा</h2>
+              <h2 className="ab-hero__title">Simple treatment,<br />real humanity</h2>
               <p className="ab-hero__lead">
-                हरिओम जनसेवा संस्थान, बरौली (गोपालगंज, बिहार) का नि:शुल्क अस्पताल —
-                जहाँ कोई भी व्यक्ति सिर्फ पैसों की कमी के कारण इलाज से वंचित नहीं रहता।
+                Hariom Janseva Sansthan is a community healthcare institution devoted to making quality treatment accessible for everyone, regardless of financial condition.
               </p>
             </div>
 
@@ -64,56 +62,43 @@ const About = () => {
           </div>
         </section>
 
-        {/* 2. Story */}
         <section className="ab-section ab-story">
           <div className="ab-wrap ab-story__grid">
-            <h3 className="ab-section__title">हमारी कहानी</h3>
+            <h3 className="ab-section__title">Our story</h3>
 
             <div className="ab-story__body">
               <p>
-                <strong>हरिओम जनसेवा संस्थान</strong> बरौली (गोपालगंज, बिहार) में स्थित एक समर्पित और
-                सेवा भाव से प्रेरित <strong>नि:शुल्क अस्पताल</strong> है, जिसकी स्थापना{' '}
-                <strong>श्री दिलीप सिंह जी</strong> के द्वारा की गई है। यह संस्थान केवल एक भवन नहीं,
-                बल्कि एक सपने की पूर्ति है — एक ऐसा सपना जहाँ कोई भी व्यक्ति सिर्फ पैसों की कमी के
-                कारण इलाज से वंचित न रहे।
+                <strong>Hariom Janseva Sansthan</strong> is a dedicated healthcare initiative serving the people of Gopalganj, Bihar and nearby communities. It was founded with a clear mission: no patient should be left untreated because of financial hardship.
               </p>
 
               <blockquote className="ab-quote">
-                <p>"सेवा ही सच्चा धर्म है"</p>
-                <footer>श्री दिलीप सिंह जी, संस्थापक</footer>
+                <p>“Service is the truest form of humanity.”</p>
+                <footer>Founder, Hariom Janseva Sansthan</footer>
               </blockquote>
 
               <p>
-                दिलीप सिंह जी के इसी विश्वास ने इस संस्थान की नींव रखी। यहाँ{' '}
-                <strong>जरूरतमंद, गरीब और असहाय मरीजों को पूरी तरह नि:शुल्क चिकित्सा सेवाएं</strong>{' '}
-                प्रदान की जाती हैं। दवाइयों से लेकर डॉक्टर की सलाह तक, हर सुविधा बिना किसी शुल्क के
-                दी जाती है — ताकि हर व्यक्ति को सम्मानजनक और स्वस्थ जीवन जीने का अवसर मिल सके।
+                The institution provides essential medical support to the vulnerable, the poor, and the underserved. From medicines to doctor consultation and basic care, every service is designed to restore dignity, hope, and health.
               </p>
 
               <p>
-                यह संस्थान केवल एक अस्पताल नहीं, बल्कि करुणा, सहानुभूति और समाज सेवा का आंदोलन है।
-                आज यह सैकड़ों लोगों के लिए आशा की किरण बन चुका है, और आगे भी हमारा प्रयास रहेगा कि
-                हम अधिक से अधिक लोगों तक निःस्वार्थ सेवा पहुँचा सकें।
+                This is more than a hospital—it is a movement of empathy, support, and social responsibility. We continue to work for a future where quality healthcare is available to everyone, with kindness at its core.
               </p>
             </div>
           </div>
         </section>
 
-        {/* 3. Mission + values */}
         <section className="ab-section ab-mission">
           <div className="ab-wrap ab-mission__grid">
             <div className="ab-mission__main">
-              <h3 className="ab-section__title">हमारा उद्देश्य | Our Mission</h3>
+              <h3 className="ab-section__title">Our mission</h3>
               <p className="ab-mission__text">
-                हम यह सुनिश्चित करते हैं कि कोई भी व्यक्ति सिर्फ पैसों की वजह से इलाज से वंचित न रहे।
-                हमारी सेवाएं 100% मुफ्त हैं और यह संस्था प्यार, सेवा और इंसानियत के मूल्यों पर टिकी
-                हुई है।
+                We aim to ensure that every person receives timely care, respectful treatment, and medical guidance without being denied because of financial constraints. Our approach is grounded in empathy, service, and human dignity.
               </p>
-              <a href="#" className="ab-btn">और जानें | Learn More</a>
+              <a href="/contact" className="ab-btn">Get in touch</a>
             </div>
 
             <div className="ab-values">
-              <h3 className="ab-section__title">हमारे मूल्य | Core Values</h3>
+              <h3 className="ab-section__title">Our values</h3>
               <ul className="ab-values__list">
                 {values.map((v) => (
                   <li key={v.text}>
@@ -126,10 +111,9 @@ const About = () => {
           </div>
         </section>
 
-        {/* 4. Services */}
         <section className="ab-section ab-services">
           <div className="ab-wrap">
-            <h3 className="ab-section__title">हम क्यों खास हैं?</h3>
+            <h3 className="ab-section__title">Why choose us</h3>
 
             <ul className="ab-services__list">
               {services.map((s) => (

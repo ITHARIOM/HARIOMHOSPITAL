@@ -1,4 +1,3 @@
-
 import React from "react";
 import SectionHeader from "./component/SectionHeader";
 import "./MissionVision.css";
@@ -6,46 +5,46 @@ import "./MissionVision.css";
 const missionItems = [
   {
     icon: "🏥",
-    title: "हर जरूरतमंद तक निःशुल्क स्वास्थ्य सेवा",
-    text: "हमारा उद्देश्य है कि कोई भी व्यक्ति इलाज या दवा के अभाव में पीड़ा न सहे। बरौली, गोपालगंज और आसपास के ग्रामीण क्षेत्रों में गरीब व वंचित लोगों को निःशुल्क इलाज और जरूरी दवाइयाँ उपलब्ध कराई जाएँ।",
+    title: "Accessible care for every patient",
+    text: "Our focus is to ensure that no person suffers in silence due to a lack of treatment, medicines, or medical support in their community.",
   },
   {
     icon: "❤️",
-    title: "स्वास्थ्य हर व्यक्ति का अधिकार",
-    text: "Hariom Jansheva Sansthan का विश्वास है कि स्वास्थ्य कोई विशेषाधिकार नहीं, बल्कि हर इंसान का मूलभूत अधिकार है। हमारा प्रयास है कि अंतिम व्यक्ति तक गुणवत्तापूर्ण स्वास्थ्य सेवा पहुँचे।",
+    title: "Health as a basic right",
+    text: "We believe health is not a privilege but a fundamental right. Every individual deserves timely, respectful, and quality care.",
   },
   {
     icon: "🌿",
-    title: "स्वास्थ्य के प्रति जागरूकता",
-    text: "हम इलाज के साथ-साथ लोगों को स्वस्थ जीवनशैली, समय पर जाँच और बीमारियों की रोकथाम के प्रति जागरूक करते हैं।",
+    title: "Prevention and awareness",
+    text: "We work beyond treatment by encouraging healthy lifestyles, early screening, and better awareness around common health issues.",
   },
   {
     icon: "🤝",
-    title: "मानवता और करुणा से सेवा",
-    text: "हम बिना किसी भेदभाव के प्रत्येक मरीज को सम्मान, प्रेम और अपनापन देते हैं। हमारे लिए हर मरीज परिवार का सदस्य है।",
+    title: "Service with dignity",
+    text: "Every patient is treated with compassion, empathy, and respect. We believe care is most meaningful when it is human-centered.",
   },
 ];
 
 const visionItems = [
   {
     icon: "🌱",
-    title: "स्वस्थ और आत्मनिर्भर ग्रामीण भारत",
-    text: "हमारा सपना है कि हर गाँव का व्यक्ति स्वस्थ, जागरूक और आत्मनिर्भर हो, जहाँ बीमारी डर नहीं बल्कि इलाज की उम्मीद लेकर आए।",
+    title: "A healthier and self-reliant community",
+    text: "We dream of a future where every citizen has access to preventive care, trusted treatment, and better health outcomes.",
   },
   {
     icon: "🏘️",
-    title: "हर गाँव तक स्वास्थ्य सेवाएँ",
-    text: "हम ऐसा भविष्य बनाना चाहते हैं जहाँ प्रत्येक गाँव में लोगों को आसानी से और किफायती दर पर गुणवत्तापूर्ण स्वास्थ्य सेवाएँ मिल सकें।",
+    title: "Healthcare reach across every village",
+    text: "We aspire to bring quality, affordable care close to every family, especially in underserved regions and rural communities.",
   },
   {
     icon: "💚",
-    title: "आर्थिक स्थिति इलाज में बाधा न बने",
-    text: "हमारा लक्ष्य है कि किसी भी व्यक्ति को पैसों की कमी के कारण इलाज से वंचित न रहना पड़े।",
+    title: "No one left behind",
+    text: "Our mission is to make sure financial limitations never become a barrier to receiving necessary medical treatment.",
   },
   {
     icon: "🇮🇳",
-    title: "सेवा का राष्ट्रीय उदाहरण बनना",
-    text: "Hariom Jansheva Sansthan बिहार से लेकर पूरे देश तक मानव सेवा और समर्पण की एक प्रेरणादायक पहचान बनाना चाहता है।",
+    title: "A model of service for the nation",
+    text: "Hariom Janseva Sansthan aims to become a lasting example of community service, compassion, and dedication in healthcare.",
   },
 ];
 
@@ -72,129 +71,100 @@ const InfoCard = ({ item, index }) => (
 const Mission = () => {
   return (
     <main className="mv-page">
-      <SectionHeader
-        title="Mission & Vision"
-        subtitle="नर सेवा नारायण सेवा"
-      />
+      <SectionHeader title="Mission & Vision" subtitle="Service • compassion • humanity" />
 
       <section className="mv-container">
         <div className="mv-intro">
-          <span className="mv-eyebrow">
-            सेवा • समर्पण • मानवता
-          </span>
+          <span className="mv-eyebrow">Care with purpose</span>
 
           <h1>
-            एक स्वस्थ समाज, <span>एक बेहतर भविष्य</span>
+            Building a healthier society, <span>one life at a time</span>
           </h1>
 
           <p>
-            हरिओम जनसेवा संस्थान का संकल्प है कि स्वास्थ्य सेवा
-            समाज के प्रत्येक व्यक्ति तक पहुँचे। हमारा हर कदम
-            मानवता, विश्वास और सेवा की भावना से प्रेरित है।
+            Hariom Janseva Sansthan is guided by the belief that quality healthcare should reach every home, every family, and every patient with dignity and respect.
           </p>
         </div>
 
         <div className="mv-grid">
-          {/* Mission Card */}
           <article className="mv-card mv-mission">
             <div className="mv-card-top">
               <div className="mv-card-icon">🎯</div>
               <span className="mv-card-label">OUR MISSION</span>
             </div>
 
-            <h2>हमारा लक्ष्य</h2>
+            <h2>Our goal</h2>
             <p className="mv-card-description">
-              सेवा के माध्यम से हर जीवन में स्वास्थ्य और आशा
-              का संचार करना।
+              To bring health, hope, and dignity to every life through compassionate and accessible healthcare.
             </p>
 
             <div className="mv-items">
               {missionItems.map((item, index) => (
-                <InfoCard
-                  key={item.title}
-                  item={item}
-                  index={index}
-                />
+                <InfoCard key={item.title} item={item} index={index} />
               ))}
             </div>
 
             <div className="mv-highlight">
               <span>✦</span>
-              <p>
-                जहाँ सेवा है, वहाँ ही ईश्वर का वास है।
-              </p>
+              <p>Where care exists, trust and healing follow.</p>
             </div>
 
-            <h3 className="mv-service-heading">
-              हमारी सेवा के प्रमुख क्षेत्र
-            </h3>
+            <h3 className="mv-service-heading">Key focus areas</h3>
 
             <ServiceList
               items={[
-                "निःशुल्क OPD एवं विशेषज्ञ परामर्श",
-                "निःशुल्क दवाइयाँ एवं सामान्य जाँच",
-                "मेडिकल शिविर एवं विशेषज्ञ डॉक्टरों की टीम",
+                "Free OPD and specialist consultation",
+                "Medicine support and routine diagnostic assistance",
+                "Community health camps and specialist outreach",
               ]}
             />
 
             <a href="/contact" className="mv-button">
-              सहयोग करें <span>→</span>
+              Support us <span>→</span>
             </a>
           </article>
 
-          {/* Vision Card */}
           <article className="mv-card mv-vision">
             <div className="mv-card-top">
               <div className="mv-card-icon">🌈</div>
               <span className="mv-card-label">OUR VISION</span>
             </div>
 
-            <h2>हमारा दृष्टिकोण</h2>
+            <h2>Our vision</h2>
             <p className="mv-card-description">
-              एक ऐसा भारत जहाँ हर व्यक्ति को स्वास्थ्य,
-              सम्मान और बेहतर जीवन का अवसर मिले।
+              To create a future where every person can access timely care, respect, and a healthier quality of life.
             </p>
 
             <div className="mv-items">
               {visionItems.map((item, index) => (
-                <InfoCard
-                  key={item.title}
-                  item={item}
-                  index={index}
-                />
+                <InfoCard key={item.title} item={item} index={index} />
               ))}
             </div>
 
             <div className="mv-highlight">
               <span>✦</span>
-              <p>
-                जहाँ सेवा है, वहाँ भविष्य की आशा है।
-              </p>
+              <p>Where compassion leads, better communities follow.</p>
             </div>
 
-            <h3 className="mv-service-heading">
-              भविष्य की हमारी परिकल्पना
-            </h3>
+            <h3 className="mv-service-heading">Future direction</h3>
 
             <ServiceList
               items={[
-                "निःशुल्क मेडिकल कॉलेज की स्थापना की दिशा में प्रयास",
-                "महिला स्वास्थ्य कार्यकर्ताओं का ग्रामीण नेटवर्क",
-                "बुजुर्गों के लिए सेवा केंद्र एवं मानसिक स्वास्थ्य सहायता",
+                "Strengthening community-based healthcare networks",
+                "Expanding women’s health and preventive care programs",
+                "Creating a more inclusive and accessible treatment model",
               ]}
             />
 
             <a href="/contact" className="mv-button">
-              हमारे साथ जुड़ें <span>→</span>
+              Join our mission <span>→</span>
             </a>
           </article>
         </div>
 
         <div className="mv-footer-note">
           <span>♥</span>
-          <p>
-            हमारा संकल्प — हर जीवन की रक्षा, हर चेहरे पर मुस्कान।
-          </p>
+          <p>Our promise: protect every life and bring hope to every family.</p>
         </div>
       </section>
     </main>
