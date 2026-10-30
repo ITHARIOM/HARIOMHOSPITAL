@@ -35,7 +35,7 @@ const Header = () => {
             </span>
             <span className="header-topbar__item">
               <i className="far fa-clock" aria-hidden="true" />
-              9:00 AM - 10:00 PM
+             24/7 Service
             </span>
           </div>
         </div>

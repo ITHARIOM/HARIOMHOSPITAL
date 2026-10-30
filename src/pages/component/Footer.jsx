@@ -145,15 +145,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <p>
-            © {currentYear} <strong>Hariom Janseva Sansthan</strong>. All rights reserved.
-          </p>
+        <div className="footer-bottom" style={{ justifyContent: "center" }}>
+  <p>
+    © {currentYear} <strong>Hariom Janseva Sansthan</strong>. All rights reserved.
+  </p>
 
-          <p className="footer-bottom-tagline">
-            Made with <i className="fas fa-heart" /> for humanity
-          </p>
-        </div>
+  <p className="footer-bottom-tagline">
+    <i className="" />
+  </p>
+</div>
       </div>
     </footer>
   );
