@@ -29,9 +29,9 @@ const Footer = () => {
             </p>
           </div>
 
-          <Link to="/contact" className="footer-top-button">
+          {/* <Link to="/contact" className="footer-top-button">
             Book an appointment <i className="fas fa-arrow-right" />
-          </Link>
+          </Link> */}
         </div>
 
         <div className="footer-divider" />

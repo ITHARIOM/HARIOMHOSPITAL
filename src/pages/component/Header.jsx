@@ -18,7 +18,6 @@ const Header = () => {
     { path: "/mission", label: "Mission" },
     { path: "/services", label: "Services" },
     { path: "/gallery", label: "Gallery" },
-    { path: "/contact", label: "Contact" },
   ];
 
   return (
@@ -43,31 +42,45 @@ const Header = () => {
       </div>
 
       <nav className="navbar">
-        <div className="container navbar__inner">
-          <Link to="/" className="navbar__brand" aria-label="Hariom Janseva Sansthan home">
-            <img src={logo} alt="Hariom Janseva Sansthan logo" />
-          </Link>
+        <div className="navbar-container">
+          <div className="navbar__inner">
+            <Link to="/" className="navbar__brand" aria-label="Hariom Janseva Sansthan home">
+              <div className="navbar__logo-box">
+                <img src={logo} alt="Hariom Janseva Sansthan logo" />
+              </div>
+            </Link>
 
-          <button
-            type="button"
-            className="navbar__toggle"
-            aria-label="Toggle navigation menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
+            <button
+              type="button"
+              className="navbar__toggle"
+              aria-label="Toggle navigation menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              <i className={menuOpen ? "fas fa-times" : "fas fa-bars"} aria-hidden="true" />
+            </button>
 
-          <div className={`navbar__menu ${menuOpen ? "is-open" : ""}`}>
-            <ul className="navbar__list">
-              {navItems.map((item) => (
-                <li key={item.path} className={getActiveClass(item.path)}>
-                  <Link to={item.path}>{item.label}</Link>
-                </li>
-              ))}
-            </ul>
+            <div className={`navbar__menu ${menuOpen ? "is-open" : ""}`}>
+              <ul className="navbar__list">
+                {navItems.map((item) => (
+                  <li key={item.path} className={getActiveClass(item.path)}>
+                    <Link to={item.path}>
+                      <span>{item.label}</span>
+                      {location.pathname === item.path && <span className="nav-active-pill" />}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="navbar__cta-wrap">
+                <Link
+                  to="/contact"
+                  className={`navbar__cta-btn ${location.pathname === "/contact" ? "is-active" : ""}`}
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </nav>
