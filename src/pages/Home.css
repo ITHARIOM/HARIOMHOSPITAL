@@ -462,21 +462,6 @@
     padding: 38px 0;
   }
 }
-gap: 12px;
-  align-items: flex-start;
-  padding: 8px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-}
-
-.hm-features li:last-child {
-  border-bottom: 0;
-}
-
-.hm-features i {
-  margin-top: 8px;
-  color: var(--hm-saffron);
-  font-size: 20px;
-}
 
 /* ================= 5. Poster ================= */
 .hm-poster {
