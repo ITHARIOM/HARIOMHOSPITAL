@@ -29,10 +29,14 @@ const Header = () => {
               <i className="fas fa-map-marker-alt" aria-hidden="true" />
               Badheya, Gopalganj, Bihar 841405
             </span>
-            <span className="header-topbar__item">
-              <i className="fas fa-phone-alt" aria-hidden="true" />
+            <a
+              href="tel:+919264496798"
+              className="header-topbar__item header-topbar__link"
+              title="Call Hariom Hospital: +91 9264496798"
+            >
+              <i className="fa-solid fa-phone" aria-hidden="true" />
               +91 9264496798
-            </span>
+            </a>
             <span className="header-topbar__item">
               <i className="far fa-clock" aria-hidden="true" />
              24/7 Service

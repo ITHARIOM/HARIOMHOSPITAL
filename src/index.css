@@ -164,6 +164,21 @@ header.site-header .navbar,
   font-size: 14px;
 }
 
+.header-topbar__link {
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.header-topbar__link:hover {
+  color: var(--brand-teal);
+  text-shadow: 0 0 10px rgba(43, 242, 202, 0.6);
+}
+
+.header-topbar__link:hover i {
+  transform: scale(1.15);
+}
+
 /* Isolated container for floating navbar to avoid bootstrap flex pollution */
 .navbar-container {
   width: min(var(--max-width), calc(100% - 32px));

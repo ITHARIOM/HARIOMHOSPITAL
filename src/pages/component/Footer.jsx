@@ -96,7 +96,7 @@ const Footer = () => {
 
               <li>
                 <span className="footer-contact-icon">
-                  <i className="fas fa-phone-alt" />
+                  <i className="fa-solid fa-phone" />
                 </span>
                 <span>
                   <strong>Call us</strong>
