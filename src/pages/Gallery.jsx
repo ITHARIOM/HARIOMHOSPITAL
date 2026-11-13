@@ -2,6 +2,15 @@ import React, { useState, useEffect, useCallback } from "react";
 import "./Gallery.css";
 import SectionHeader from "./component/SectionHeader";
 
+import work1 from "@/assets/img/works/1.jpg";
+import work2 from "@/assets/img/works/2.jpg";
+import work3 from "@/assets/img/works/3.jpg";
+import work4 from "@/assets/img/works/4.jpg";
+import work5 from "@/assets/img/works/5.jpg";
+import work6 from "@/assets/img/works/6.jpg";
+import work7 from "@/assets/img/works/7.jpg";
+import work8 from "@/assets/img/works/8.jpg";
+
 /*
   type ke options: "hospital" | "camp" | "team" | "event"
   Har photo ka title/type apne hisaab se badal lena.
@@ -15,14 +24,14 @@ const categories = [
 ];
 
 const galleryItems = [
-    { src: "src/assets/img/works/1.jpg", type: "hospital", title: "Hospital building" },
-    { src: "src/assets/img/works/2.jpg", type: "camp", title: "Free health check-up camp" },
-    { src: "src/assets/img/works/3.jpg", type: "team", title: "Doctors and staff" },
-    { src: "src/assets/img/works/4.jpg", type: "hospital", title: "Patient ward" },
-    { src: "src/assets/img/works/5.jpg", type: "event", title: "Community event" },
-    { src: "src/assets/img/works/6.jpg", type: "camp", title: "Eye check-up camp" },
-    { src: "src/assets/img/works/7.jpg", type: "hospital", title: "Reception and waiting area" },
-    { src: "src/assets/img/works/8.jpg", type: "team", title: "Nursing team" },
+    { src: work1, type: "hospital", title: "Hospital building" },
+    { src: work2, type: "camp", title: "Free health check-up camp" },
+    { src: work3, type: "team", title: "Doctors and staff" },
+    { src: work4, type: "hospital", title: "Patient ward" },
+    { src: work5, type: "event", title: "Community event" },
+    { src: work6, type: "camp", title: "Eye check-up camp" },
+    { src: work7, type: "hospital", title: "Reception and waiting area" },
+    { src: work8, type: "team", title: "Nursing team" },
 ];
 
 const Gallery = () => {
