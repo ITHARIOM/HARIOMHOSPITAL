@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 
 import slide1 from "@/assets/img/front-img.jpg";
 import slide2 from "@/assets/img/front22.jpg";
-import png1 from "@/assets/img/1.png";
-import png2 from "@/assets/img/2.png";
-import png3 from "@/assets/img/3.png";
-import png4 from "@/assets/img/4.png";
 import welcome from "@/assets/img/welcome.jpg";
 import post from "@/assets/img/post.jpg";
+
+import imgGynecology from "@/assets/img/care-focus/care-gynecology.jpg";
+import imgPhysician from "@/assets/img/care-focus/care-physician.jpg";
+import imgOrthopedic from "@/assets/img/care-focus/care-orthopedic.jpg";
+import imgPhysicalTherapy from "@/assets/img/care-focus/care-physical-therapy.jpg";
+import imgCardiology from "@/assets/img/care-focus/care-cardiology.jpg";
 
 import "./Home.css";
 
@@ -26,23 +28,38 @@ const slides = [
 
 const services = [
   {
-    img: png1,
+    id: "gynecology",
+    img: imgGynecology,
     title: "Gynecology & Obstetrics",
-    desc: "Complete women’s healthcare from adolescence to menopause, including preventive, diagnostic, and maternity support.",
+    subtitle: null,
+    desc: "Complete women's healthcare from adolescence to menopause, including preventive, diagnostic, and maternity support.",
   },
   {
-    img: png2,
+    id: "physician",
+    img: imgPhysician,
     title: "General Physician",
+    subtitle: null,
     desc: "Expert evaluation and treatment for common illnesses, chronic conditions, and everyday health concerns.",
   },
   {
-    img: png3,
+    id: "orthopedic",
+    img: imgOrthopedic,
     title: "Orthopedic Care",
+    subtitle: null,
     desc: "Specialized treatment for bones, joints, and muscles to restore mobility, comfort, and confident movement.",
   },
   {
-    img: png4,
+    id: "rehab",
+    img: imgPhysicalTherapy,
+    title: "Physical Therapy & Rehabilitation Card",
+    subtitle: "Physical Therapy & Rehabilitation Card",
+    desc: "Customized therapy and rehabilitation programs to restore mobility, strength, and functional independence.",
+  },
+  {
+    id: "cardiology",
+    img: imgCardiology,
     title: "Cardiology",
+    subtitle: "Cardiology Card",
     desc: "Advanced heart care focused on prevention, early diagnosis, ongoing management, and long-term wellness.",
   },
 ];
@@ -186,14 +203,28 @@ const Home = () => {
             <h2 className="hm-title">Complete healthcare services for your family</h2>
           </div>
 
-          <div className="hm-services__grid">
-            {services.map((service) => (
-              <article className="hm-service" key={service.title}>
-                <div className="hm-service__icon">
-                  <img src={service.img} alt={service.title} />
+          <div className="hm-care__grid">
+            {services.map((service, index) => (
+              <article
+                className={`hm-care-card hm-care-card--${index + 1}`}
+                key={service.id}
+              >
+                <div className="hm-care-card__media">
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="hm-care-card__img"
+                    loading="lazy"
+                  />
+                  <div className="hm-care-card__overlay" />
                 </div>
-                <h3>{service.title}</h3>
-                <p>{service.desc}</p>
+                <div className="hm-care-card__content">
+                  <h3 className="hm-care-card__title">{service.title}</h3>
+                  {service.subtitle && (
+                    <span className="hm-care-card__subtitle">{service.subtitle}</span>
+                  )}
+                  <p className="hm-care-card__desc">{service.desc}</p>
+                </div>
               </article>
             ))}
           </div>
