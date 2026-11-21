@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import Home from "./pages/Home";
 import Header from "./pages/component/Header";
@@ -9,12 +10,20 @@ import Mission from "./pages/Mission";
 import ServicesPage from "./pages/ServicesPage";
 import Contact from "./pages/Contact";
 import AppointmentButton from "./pages/component/AppointmentButton";
-{/* <Header */ }
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname]);
+
+  return null;
+};
 
 const App = () => {
   return (
     <Router>
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

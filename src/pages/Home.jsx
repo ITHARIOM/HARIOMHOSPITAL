@@ -5,12 +5,6 @@ import slide2 from "@/assets/img/front22.jpg";
 import welcome from "@/assets/img/welcome.jpg";
 import post from "@/assets/img/post.jpg";
 
-import imgGynecology from "@/assets/img/care-focus/care-gynecology.jpg";
-import imgPhysician from "@/assets/img/care-focus/care-physician.jpg";
-import imgOrthopedic from "@/assets/img/care-focus/care-orthopedic.jpg";
-import imgPhysicalTherapy from "@/assets/img/care-focus/care-physical-therapy.jpg";
-import imgCardiology from "@/assets/img/care-focus/care-cardiology.jpg";
-
 import "./Home.css";
 
 const slides = [
@@ -29,37 +23,37 @@ const slides = [
 const services = [
   {
     id: "gynecology",
-    img: imgGynecology,
+    img: "/assets/images/gyencology.png",
     title: "Gynecology & Obstetrics",
     subtitle: null,
     desc: "Complete women's healthcare from adolescence to menopause, including preventive, diagnostic, and maternity support.",
   },
   {
     id: "physician",
-    img: imgPhysician,
+    img: "/assets/images/general physician.png",
     title: "General Physician",
     subtitle: null,
     desc: "Expert evaluation and treatment for common illnesses, chronic conditions, and everyday health concerns.",
   },
   {
     id: "orthopedic",
-    img: imgOrthopedic,
+    img: "/assets/images/orthopedic.png",
     title: "Orthopedic Care",
     subtitle: null,
     desc: "Specialized treatment for bones, joints, and muscles to restore mobility, comfort, and confident movement.",
   },
   {
     id: "rehab",
-    img: imgPhysicalTherapy,
-    title: "Physical Therapy & Rehabilitation Card",
-    subtitle: "Physical Therapy & Rehabilitation Card",
+    img: "/assets/images/therapy.png",
+    title: "Physical Therapy & Rehabilitation",
+    subtitle: null,
     desc: "Customized therapy and rehabilitation programs to restore mobility, strength, and functional independence.",
   },
   {
     id: "cardiology",
-    img: imgCardiology,
+    img: "/assets/images/Cardiology.png",
     title: "Cardiology",
-    subtitle: "Cardiology Card",
+    subtitle: null,
     desc: "Advanced heart care focused on prevention, early diagnosis, ongoing management, and long-term wellness.",
   },
 ];
@@ -209,13 +203,15 @@ const Home = () => {
                 className={`hm-care-card hm-care-card--${index + 1}`}
                 key={service.id}
               >
-                <div className="hm-care-card__media">
-                  <img
-                    src={service.img}
-                    alt={service.title}
-                    className="hm-care-card__img"
-                    loading="lazy"
-                  />
+                <div
+                    className="hm-care-card__media"
+                    style={{
+                      backgroundImage: `url("${service.img}")`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  >
                   <div className="hm-care-card__overlay" />
                 </div>
                 <div className="hm-care-card__content">
@@ -231,7 +227,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="hm-section hm-welcome">
+      <section className="hm-welcome">
         <div className="hm-wrap hm-welcome__grid">
           <div className="hm-welcome__photo">
             <img src={welcome} alt="Hariom Janseva Sansthan" />
